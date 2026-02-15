@@ -1,0 +1,29 @@
+[Unit]
+Description=OpenClaw Gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=tomwaro
+Group=tomwaro
+WorkingDirectory=/home/tomwaro
+Environment="HOME=/home/tomwaro"
+Environment="OPENCLAW_WORKSPACE=/home/tomwaro/.openclaw/workspace"
+Environment="PATH=/usr/local/bin:/usr/bin:/bin:/home/tomwaro/.npm-global/bin"
+
+# Commande pour lancer OpenClaw (adapte si besoin)
+ExecStart=/home/tomwaro/.npm-global/bin/openclaw gateway start --foreground
+ExecStop=/home/tomwaro/.npm-global/bin/openclaw gateway stop
+
+# Redémarrage automatique en cas de crash
+Restart=always
+RestartSec=5
+
+# Sécurité
+NoNewPrivileges=false
+ProtectSystem=no
+ProtectHome=no
+
+[Install]
+WantedBy=multi-user.target
