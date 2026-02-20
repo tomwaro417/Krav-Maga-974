@@ -1,6 +1,35 @@
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
 
+interface CoachVideoLink {
+  isActive: boolean;
+  video: { id: string; status: string };
+}
+
+interface Module {
+  id: string;
+  title: string;
+  belt: {
+    id: string;
+    code: string;
+    name: string;
+  };
+}
+
+interface Technique {
+  id: string;
+  title: string;
+  descriptionRich: string | null;
+  keywords: string | null;
+  module: Module;
+  coachVideoLink: CoachVideoLink | null;
+}
+
+interface UserVideo {
+  slot: string;
+  video: { id: string; status: string };
+}
+
 export async function GET(req: Request, { params }: { params: { techniqueId: string } }) {
   const user = await requireUser(req);
 
@@ -10,7 +39,7 @@ export async function GET(req: Request, { params }: { params: { techniqueId: str
       module: { include: { belt: true } },
       coachVideoLink: { include: { video: true } }
     }
-  });
+  }) as unknown as Technique | null;
   if (!technique) return new Response("Not found", { status: 404 });
 
   // Historique (dernier vu)
@@ -27,7 +56,7 @@ export async function GET(req: Request, { params }: { params: { techniqueId: str
   const userVideos = await prisma.userTechniqueVideo.findMany({
     where: { userId: user.id, techniqueId: technique.id, isActive: true },
     include: { video: true }
-  });
+  }) as unknown as UserVideo[];
 
   return Response.json({
     technique: {
@@ -43,7 +72,7 @@ export async function GET(req: Request, { params }: { params: { techniqueId: str
         status: technique.coachVideoLink.video.status,
         playbackUrl: null
       } : null,
-      myVideos: userVideos.map(v => ({
+      myVideos: userVideos.map((v: UserVideo) => ({
         slot: v.slot,
         assetId: v.video.id,
         status: v.video.status,

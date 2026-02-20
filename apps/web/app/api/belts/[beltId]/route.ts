@@ -3,6 +3,12 @@ import { requireUser } from "@/lib/auth";
 import type { MasteryLevel } from "@/lib/types";
 import { computeKnownPlusPercent, computeMasteredPercent } from "@/lib/progress";
 
+// Types pour les résultats Prisma
+interface Technique { id: string; title: string; orderIndex: number }
+interface Module { id: string; title: string; orderIndex: number; techniques: Technique[] }
+interface Belt { id: string; code: string; name: string; orderIndex: number; content?: { contentRich?: string | null } | null; modules: Module[] }
+interface Progress { techniqueId: string; mastery: string }
+
 export async function GET(req: Request, { params }: { params: { beltId: string } }) {
   const user = await requireUser(req);
 
@@ -18,17 +24,17 @@ export async function GET(req: Request, { params }: { params: { beltId: string }
         }
       }
     }
-  });
+  }) as unknown as Belt | null;
   if (!belt) return new Response("Not found", { status: 404 });
 
-  const techniqueIds = belt.modules.flatMap((m: { techniques: { id: string }[] }) => m.techniques.map((t: { id: string }) => t.id));
+  const techniqueIds = belt.modules.flatMap((m: Module) => m.techniques.map((t: Technique) => t.id));
   const progresses = await prisma.userTechniqueProgress.findMany({
     where: { userId: user.id, techniqueId: { in: techniqueIds } }
-  });
-  const pMap = new Map(progresses.map(p => [p.techniqueId, p.mastery as MasteryLevel]));
+  }) as unknown as Progress[];
+  const pMap = new Map(progresses.map((p: Progress) => [p.techniqueId, p.mastery as MasteryLevel]));
 
-  const modules = belt.modules.map(m => {
-    const levels: MasteryLevel[] = m.techniques.map(t => pMap.get(t.id) ?? "NOT_SEEN");
+  const modules = belt.modules.map((m: Module) => {
+    const levels: MasteryLevel[] = m.techniques.map((t: Technique) => pMap.get(t.id) ?? "NOT_SEEN");
     return {
       id: m.id,
       title: m.title,

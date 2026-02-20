@@ -1,8 +1,19 @@
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
 
-async function runQuery(sql: string, params: any[]) {
-  return await prisma.$queryRawUnsafe<any[]>(sql, ...params);
+async function runQuery(sql: string, params: unknown[]) {
+  return await prisma.$queryRawUnsafe<unknown[]>(sql, ...params);
+}
+
+interface SearchRow {
+  id: string;
+  title: string;
+  mastery: string;
+  moduleId: string;
+  moduleTitle: string;
+  beltId: string;
+  beltCode: string;
+  beltName: string;
 }
 
 export async function GET(req: Request) {
@@ -16,7 +27,7 @@ export async function GET(req: Request) {
 
   if (!q && !beltId) return Response.json({ results: [] });
 
-  const params: any[] = [user.id];
+  const params: unknown[] = [user.id];
   let where = `WHERE t."isActive" = true AND m."isActive" = true AND b."isActive" = true`;
   if (moduleId) { params.push(moduleId); where += ` AND m.id = $${params.length}`; }
   if (beltId) { params.push(beltId); where += ` AND b.id = $${params.length}`; }
@@ -55,7 +66,7 @@ export async function GET(req: Request) {
      ${where}`;
 
   // Tentative avec pg_trgm similarity() si dispo
-  let rows: any[];
+  let rows: unknown[];
   try {
     const orderBy = q
       ? `ORDER BY similarity(t.title, $${likeParamIndex}) DESC, b."orderIndex" ASC, m."orderIndex" ASC, t."orderIndex" ASC`
@@ -67,7 +78,7 @@ export async function GET(req: Request) {
     rows = await runQuery(`${baseSelect} ${orderBy} LIMIT ${limit}`, params);
   }
 
-  const results = rows.map(r => ({
+  const results = (rows as SearchRow[]).map((r: SearchRow) => ({
     id: r.id,
     title: r.title,
     mastery: r.mastery,

@@ -2,6 +2,21 @@ import { prisma } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
 import { masteryEnum } from "@/lib/schemas";
 
+interface CountRow {
+  count: bigint;
+}
+
+interface ToWorkRow {
+  techniqueId: string;
+  techniqueTitle: string;
+  mastery: string;
+  moduleId: string;
+  moduleTitle: string;
+  beltId: string;
+  beltCode: string;
+  beltName: string;
+}
+
 export async function GET(req: Request) {
   const user = await requireUser(req);
   const url = new URL(req.url);
@@ -19,7 +34,7 @@ export async function GET(req: Request) {
   if (mastery === "MASTERED") return Response.json({ items: [], page, pageSize, total: 0 });
 
   // Raw SQL pour gérer NOT_SEEN = (pas de ligne) OU (mastery NOT_SEEN)
-  const params: any[] = [user.id];
+  const params: unknown[] = [user.id];
   let where = "";
   if (moduleId) { params.push(moduleId); where += ` AND t."moduleId" = $${params.length}`; }
   if (beltId) { params.push(beltId); where += ` AND m."beltId" = $${params.length}`; }
@@ -34,7 +49,7 @@ export async function GET(req: Request) {
     where += ` AND p."mastery" = $${params.length}`;
   }
 
-  const totalRows = await prisma.$queryRawUnsafe<{ count: bigint }[]>(
+  const totalRows = await prisma.$queryRawUnsafe<CountRow[]>(
     `SELECT COUNT(*)::bigint as count
      FROM "Technique" t
      JOIN "Module" m ON m.id = t."moduleId"
@@ -48,7 +63,7 @@ export async function GET(req: Request) {
   params.push(pageSize);
   params.push(offset);
 
-  const rows = await prisma.$queryRawUnsafe<any[]>(
+  const rows = await prisma.$queryRawUnsafe<ToWorkRow[]>(
     `SELECT
        t.id as "techniqueId",
        t.title as "techniqueTitle",
@@ -83,7 +98,7 @@ export async function GET(req: Request) {
     page,
     pageSize,
     total,
-    items: rows.map(r => ({
+    items: rows.map((r: ToWorkRow) => ({
       mastery: r.mastery,
       technique: { id: r.techniqueId, title: r.techniqueTitle },
       module: { id: r.moduleId, title: r.moduleTitle },

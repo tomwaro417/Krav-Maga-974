@@ -6,7 +6,8 @@ import type { MasteryLevel } from "@/lib/types";
 // Types pour les résultats Prisma
 interface Technique { id: string }
 interface Module { techniques: Technique[] }
-interface Belt { modules: Module[] }
+interface Belt { id: string; code: string; name: string; orderIndex: number; content?: { contentRich?: string | null } | null; modules: Module[] }
+interface Progress { techniqueId: string; mastery: string }
 
 export async function GET(req: Request) {
   const user = await requireUser(req);
@@ -30,10 +31,10 @@ export async function GET(req: Request) {
   const allTechniqueIds = belts.flatMap((b: Belt) => b.modules.flatMap((m: Module) => m.techniques.map((t: Technique) => t.id)));
   const progresses = await prisma.userTechniqueProgress.findMany({
     where: { userId: user.id, techniqueId: { in: allTechniqueIds } }
-  });
-  const pMap = new Map(progresses.map(p => [p.techniqueId, p.mastery as MasteryLevel]));
+  }) as unknown as Progress[];
+  const pMap = new Map(progresses.map((p: Progress) => [p.techniqueId, p.mastery as MasteryLevel]));
 
-  const withProgress = belts.map(b => {
+  const withProgress = belts.map((b: Belt) => {
     const levels: MasteryLevel[] = b.modules.flatMap((m: Module) => m.techniques.map((t: Technique) => pMap.get(t.id) ?? "NOT_SEEN"));
     return {
       id: b.id,
