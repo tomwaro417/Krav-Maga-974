@@ -1,0 +1,156 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum MasteryLevel {
+  NOT_SEEN
+  SEEN
+  KNOWN
+  MASTERED
+}
+
+enum VideoStatus {
+  PROCESSING
+  READY
+  FAILED
+}
+
+enum UserVideoSlot {
+  BEGINNER
+  PROGRESS
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  lastLogin DateTime?
+
+  progresses UserTechniqueProgress[]
+  videos     UserTechniqueVideo[]
+}
+
+model Belt {
+  id         String   @id @default(cuid())
+  code       String   @unique
+  name       String
+  orderIndex Int
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  modules    Module[]
+  content    BeltContent?
+}
+
+model BeltContent {
+  id          String   @id @default(cuid())
+  beltId      String   @unique
+  contentRich String   // markdown (recommandé)
+  sourceRef   String?
+  updatedAt   DateTime @updatedAt
+  updatedBy   String?
+
+  belt Belt @relation(fields: [beltId], references: [id], onDelete: Cascade)
+}
+
+model Module {
+  id         String   @id @default(cuid())
+  beltId     String
+  title      String
+  orderIndex Int
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  belt       Belt      @relation(fields: [beltId], references: [id], onDelete: Cascade)
+  techniques Technique[]
+}
+
+model Technique {
+  id             String   @id @default(cuid())
+  moduleId       String
+  title          String
+  orderIndex     Int
+  descriptionRich String?
+  keywords       String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  module   Module @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  progress UserTechniqueProgress[]
+  coachVideoLink TechniqueVideoLink?
+  userVideos UserTechniqueVideo[]
+}
+
+model UserTechniqueProgress {
+  id          String       @id @default(cuid())
+  userId      String
+  techniqueId String
+  mastery     MasteryLevel @default(NOT_SEEN)
+  updatedAt   DateTime     @updatedAt
+  notes       String?
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  technique Technique @relation(fields: [techniqueId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, techniqueId])
+  @@index([userId])
+  @@index([techniqueId])
+}
+
+model VideoAsset {
+  id        String      @id @default(cuid())
+  provider  String
+  storageKey String
+  status    VideoStatus @default(PROCESSING)
+  duration  Int?
+  size      Int?
+  format    String?
+  createdAt DateTime    @default(now())
+
+  coachLinks TechniqueVideoLink[]
+  userLinks  UserTechniqueVideo[]
+}
+
+model TechniqueVideoLink {
+  id          String   @id @default(cuid())
+  techniqueId String   @unique
+  videoAssetId String
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  technique Technique @relation(fields: [techniqueId], references: [id], onDelete: Cascade)
+  video      VideoAsset @relation(fields: [videoAssetId], references: [id], onDelete: Restrict)
+}
+
+model UserTechniqueVideo {
+  id          String       @id @default(cuid())
+  userId      String
+  techniqueId String
+  slot        UserVideoSlot
+  videoAssetId String
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  deletedAt   DateTime?
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  technique Technique @relation(fields: [techniqueId], references: [id], onDelete: Cascade)
+  video     VideoAsset @relation(fields: [videoAssetId], references: [id], onDelete: Restrict)
+
+  @@unique([userId, techniqueId, slot, deletedAt])
+  @@index([userId])
+  @@index([techniqueId])
+}
