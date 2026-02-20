@@ -2,6 +2,7 @@ import { prisma } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
 import { importSchema } from "@/lib/schemas";
 import { logAdminAction } from "@/lib/audit";
+import type { Prisma } from "@prisma/client";
 
 export async function POST(req: Request) {
   const admin = await requireAdmin(req);
@@ -22,7 +23,7 @@ export async function POST(req: Request) {
     return Response.json({ ok: true, dryRun: true, result: { beltsUpserted, modulesCreated, techniquesCreated } });
   }
 
-  const result = await prisma.$transaction(async (tx) => {
+  const result = await prisma.$transaction(async (tx: Prisma.TransactionClient) => {
     let beltsUpserted = 0;
     let modulesCreated = 0;
     let techniquesCreated = 0;
