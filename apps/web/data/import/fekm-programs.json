@@ -1,0 +1,2036 @@
+{
+  "belts": [
+    {
+      "code": "JAUNE",
+      "name": "Jaune",
+      "orderIndex": 1,
+      "isActive": true,
+      "modules": [
+        {
+          "title": "UV1 — TECHNIQUES EN POSITION NEUTRE",
+          "orderIndex": 1,
+          "techniques": [
+            {
+              "title": "Coup de tête.",
+              "orderIndex": 1
+            },
+            {
+              "title": "9 coups de coude :",
+              "orderIndex": 2
+            },
+            {
+              "title": "9 coups de coude — De face : circulaire, remontant (uppercut), descendant.",
+              "orderIndex": 3
+            },
+            {
+              "title": "9 coups de coude — De côté : latéral, circulaire (bras opposé), remontant.",
+              "orderIndex": 4
+            },
+            {
+              "title": "9 coups de coude — Arrière : circulaire, direct au corps, en remontant.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Coup direct de poing, de paume, en pique. Sur place, en avançant et en reculant.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Crochet.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Coups du marteau de côté ou de dos.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Coups de pied et de genoux. Sur place ou en se déplaçant vers la cible dans le même temps :",
+              "orderIndex": 9
+            },
+            {
+              "title": "Coups de pied et de genoux. Sur place ou en se déplaçant vers la cible dans le même temps — Coup de genou direct.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Coups de pied et de genoux. Sur place ou en se déplaçant vers la cible dans le même temps — Coup de genou circulaire.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Coups de pied et de genoux. Sur place ou en se déplaçant vers la cible dans le même temps — Coup de pied direct.",
+              "orderIndex": 12
+            },
+            {
+              "title": "Coups de pied et de genoux. Sur place ou en se déplaçant vers la cible dans le même temps — Coup de pied circulaire.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Coups de pied et de genoux. Sur place ou en se déplaçant vers la cible dans le même temps — Coup de pied de côté.",
+              "orderIndex": 14
+            },
+            {
+              "title": "Coups de pied et de genoux. Sur place ou en se déplaçant vers la cible dans le même temps — Coup de pied direct arrière.",
+              "orderIndex": 15
+            },
+            {
+              "title": "Arrêt de l’agresseur qui avance à l'aide d’un direct léger avec la paume et les doigts sans causer de dommages. Sur place, en avançant, en reculant.",
+              "orderIndex": 16
+            },
+            {
+              "title": "360° et 360° avec contre simultané.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Contre un coup de poing direct au visage :",
+              "orderIndex": 18
+            },
+            {
+              "title": "Contre un coup de poing direct au visage — Défense intérieure de la paume.",
+              "orderIndex": 19
+            },
+            {
+              "title": "Contre un coup de poing direct au visage — Contre simultané :",
+              "orderIndex": 20
+            },
+            {
+              "title": "Contre un coup de poing direct au visage — Contre un direct du gauche : parade intérieure de la paume droite et contre simultané du gauche.",
+              "orderIndex": 21
+            },
+            {
+              "title": "Contre un coup de poing direct au visage — Contre un direct du droit : parade intérieure de la paume gauche et contre simultané d’un direct du droit.",
+              "orderIndex": 22
+            },
+            {
+              "title": "Contre un coup de pied direct bas :",
+              "orderIndex": 23
+            },
+            {
+              "title": "Contre un coup de pied direct bas — Blocage avec le pied (talon à l’intérieur) et contre-attaque.",
+              "orderIndex": 24
+            },
+            {
+              "title": "Contre un coup de pied direct bas — Si l’agresseur est sur le côté, blocage avec le pied (talon à l’extérieur) et contre-attaque.",
+              "orderIndex": 25
+            },
+            {
+              "title": "Contre un low-kick :",
+              "orderIndex": 26
+            },
+            {
+              "title": "Contre un low-kick — Blocage avec le tibia et contre-attaque.",
+              "orderIndex": 27
+            },
+            {
+              "title": "Contre un low-kick — Coup de pied direct aux parties génitales.",
+              "orderIndex": 28
+            },
+            {
+              "title": "Contre un coup de pied circulaire au-dessus de la ceinture : défense extérieure de l’avant-bras et coup de pied direct aux parties génitales.",
+              "orderIndex": 29
+            }
+          ]
+        },
+        {
+          "title": "UV2 — DEFENSES CONTRE SAISIES",
+          "orderIndex": 2,
+          "techniques": [
+            {
+              "title": "Dégagement d’étranglement de face :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Dégagement d’étranglement de face — Arrêt de l’agresseur avant l’étranglement.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Dégagement d’étranglement de face — Oter d’une main et contre-attaque simultanée de l’autre.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Dégagement d’étranglement de face — Crochetage des mains et coup de genou.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Dégagement d’une prise de cou de côté avec l'avant-bras : frappe de la paume aux parties génitales, dans le même temps prise d’un point sensible (œil, nez, cheveux, barbe) et dégager l’agresseur vers l’arrière, projection.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Dégagement d’étranglement de côté.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Dégagement d’étranglement arrière sur place et en tirant : crochetage des mains en reculant en diagonale arrière puis attaque de la main aux parties génitales et du coude au menton, demi-tour et coup de pied bas. Possibilité de clé de poignet. D’autres options sont possibles après la frappe aux parties génitales. Mise à jour 29 août 2025 Ceinture JAUNE - Krav Maga FEKM-RD 1 sur 3",
+              "orderIndex": 7
+            }
+          ]
+        },
+        {
+          "title": "UV3 — CHUTES / ROULADES",
+          "orderIndex": 3,
+          "techniques": [
+            {
+              "title": "Roulade avant, épaule droite et gauche.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Roulade arrière, épaule droite et gauche.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Chute avant amortie en souplesse.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Chute sur le côté amortie.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Chute arrière amortie.",
+              "orderIndex": 5
+            }
+          ]
+        },
+        {
+          "title": "UV4 — TECHNIQUES EN POSITION DE GARDE ET TECHNIQUES DE COMBAT",
+          "orderIndex": 4,
+          "techniques": [
+            {
+              "title": "Position de garde générale.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Déplacements toutes directions.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Déplacements dans des directions différentes pour esquiver les coups en cassant la distance et en changeant de direction.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Coup de tête.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Coups de coude :",
+              "orderIndex": 5
+            },
+            {
+              "title": "Coups de coude — Circulaire.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Coups de coude — Retombant en diagonale.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Coups de coude — Remontant (Uppercut).",
+              "orderIndex": 8
+            },
+            {
+              "title": "Coups de coude — Direct en avançant, avant-bras vertical.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Coups de coude — Descendant.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Coups de poing :",
+              "orderIndex": 11
+            },
+            {
+              "title": "Coups de poing — Coups directs de poing, de paume et en pique, au visage et à la gorge.",
+              "orderIndex": 12
+            },
+            {
+              "title": "Coups de poing — Coups directs de poing, de paume et en pique en se déplaçant.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Coups de poing — Coups de poing directs au corps : en attaque et en défense.",
+              "orderIndex": 14
+            },
+            {
+              "title": "Coups de poing — Enchaînement de tous les directs.",
+              "orderIndex": 15
+            },
+            {
+              "title": "Coups de poing — Crochets à différentes hauteurs et différentes distances.",
+              "orderIndex": 16
+            },
+            {
+              "title": "Coups du marteau.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Coups de pied et de genou :",
+              "orderIndex": 18
+            },
+            {
+              "title": "Coups de pied et de genou — Coup de genou direct.",
+              "orderIndex": 19
+            },
+            {
+              "title": "Coups de pied et de genou — Coup de genou circulaire.",
+              "orderIndex": 20
+            },
+            {
+              "title": "Coups de pied et de genou — Coup de pied direct.",
+              "orderIndex": 21
+            },
+            {
+              "title": "Coups de pied et de genou — Coup de pied circulaire.",
+              "orderIndex": 22
+            },
+            {
+              "title": "Coups de pied et de genou — Coup de pied de côté.",
+              "orderIndex": 23
+            },
+            {
+              "title": "Coups de pied et de genou — Coup de pied direct arrière.",
+              "orderIndex": 24
+            },
+            {
+              "title": "Coups de pied et de genou — Tous les coups de pied appris seront effectués en avançant en pas chassé.",
+              "orderIndex": 25
+            },
+            {
+              "title": "Enchaînement coup de poing et pied ou le contraire.",
+              "orderIndex": 26
+            },
+            {
+              "title": "Shadow",
+              "orderIndex": 27
+            },
+            {
+              "title": "Contre un coup de poing direct au visage, défense et contre simultané :",
+              "orderIndex": 28
+            },
+            {
+              "title": "Contre un coup de poing direct au visage, défense et contre simultané — Contre un direct du gauche parade intérieure de la paume droite et contre simultané du gauche.",
+              "orderIndex": 29
+            },
+            {
+              "title": "Contre un coup de poing direct au visage, défense et contre simultané — Contre un direct du droit : parade intérieure de la paume gauche et contre simultané d’un direct du droit.",
+              "orderIndex": 30
+            },
+            {
+              "title": "Défense vers le bas :",
+              "orderIndex": 31
+            },
+            {
+              "title": "Défense vers le bas — Contre un direct du bras droit (arrière) : parade intérieure de la paume gauche et contre du droit simultanément en abaissant de la main gauche la droite de l’agresseur.",
+              "orderIndex": 32
+            },
+            {
+              "title": "Défense vers le bas — Contre un direct du bras gauche (avant) : parade intérieure de la paume droite et contre du gauche simultanément en abaissant de la main droite la gauche de l’agresseur.",
+              "orderIndex": 33
+            },
+            {
+              "title": "Contre crochet au visage : le côté extérieur de l’avant-bras percutera le bras de l’agresseur. La tête en protection, enfoncée dans les épaules. Frapper de l’autre bras en coup de poing direct simultané.",
+              "orderIndex": 34
+            },
+            {
+              "title": "Contre coup de poing direct au corps : parade intérieure de l’avant-bras (vertical) et contre d’un direct. Mise à jour 29 août 2025 Ceinture JAUNE - Krav Maga FEKM-RD 2 sur 3",
+              "orderIndex": 35
+            },
+            {
+              "title": "Contre un coup de pied direct de la jambe gauche ou droite aux parties génitales :",
+              "orderIndex": 36
+            },
+            {
+              "title": "Contre un coup de pied direct de la jambe gauche ou droite aux parties génitales — Défense intérieure de la jambe avant et contre en direct du bras avant.",
+              "orderIndex": 37
+            },
+            {
+              "title": "Contre un coup de pied direct de la jambe gauche ou droite aux parties génitales — Blocage du pied avant (talon à l’extérieur) et contre-attaque.",
+              "orderIndex": 38
+            },
+            {
+              "title": "Contre un coup de pied direct de la jambe gauche ou droite aux parties génitales — Blocage du pied arrière (talon à l’intérieur) et contre-attaque.",
+              "orderIndex": 39
+            },
+            {
+              "title": "Contre un coup de pied direct de la jambe gauche ou droite au corps : parade intérieure de l’avant-bras (avant-bras vertical) et contre d’un direct.",
+              "orderIndex": 40
+            },
+            {
+              "title": "Contre low-kick :",
+              "orderIndex": 41
+            },
+            {
+              "title": "Contre low-kick — Poids sur la jambe avant pour durcir la jambe et contre-attaque.",
+              "orderIndex": 42
+            },
+            {
+              "title": "Contre low-kick — Blocage avec le tibia et contre-attaque.",
+              "orderIndex": 43
+            },
+            {
+              "title": "Contre low-kick — Retrait de la jambe avant et contre-attaque.",
+              "orderIndex": 44
+            },
+            {
+              "title": "Contre low-kick — Coup de pied direct de la jambe avant aux parties contre un low-kick de la jambe arrière.",
+              "orderIndex": 45
+            },
+            {
+              "title": "Contre un coup de pied circulaire au-dessus de la ceinture : défense extérieure de l’avant-bras et coup de pied aux parties génitales.",
+              "orderIndex": 46
+            }
+          ]
+        },
+        {
+          "title": "UV5 — SOL : L’objectif est de ne surtout pas rester à terre",
+          "orderIndex": 5,
+          "techniques": [
+            {
+              "title": "Mouvements de base au sol :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Mouvements de base au sol — Pontage.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Mouvements de base au sol — Langouste.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Défenses contre un agresseur debout :",
+              "orderIndex": 4
+            },
+            {
+              "title": "Défenses contre un agresseur debout — Position de défense au sol sur le dos.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Défenses contre un agresseur debout — Agresseur en mouvement :",
+              "orderIndex": 6
+            },
+            {
+              "title": "Défenses contre un agresseur debout — Déplacements sur le dos à l’aide des coudes.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Défenses contre un agresseur debout — Déplacements sur le dos à l’aide d’un pied au sol.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Défenses contre un agresseur debout — Se relever en passant par la position assise. Possibilité de frapper depuis la position assise.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Techniques dans la garde :",
+              "orderIndex": 10
+            },
+            {
+              "title": "Techniques dans la garde — Apprentissage de la position. L’agresseur est sur le dos, le défenseur est entre ses jambes : stabiliser, frapper et se relever.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Techniques dans la garde — Le défenseur est sur le dos et l’agresseur est entre ses jambes :",
+              "orderIndex": 12
+            },
+            {
+              "title": "Techniques dans la garde — Défenses contre des frappes en se couvrant la tête.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Techniques dans la garde — Langouste, pied hanche / pied tête puis se relever.",
+              "orderIndex": 14
+            },
+            {
+              "title": "Techniques en position montée :",
+              "orderIndex": 15
+            },
+            {
+              "title": "Techniques en position montée — Apprentissage de la position. L’agresseur est sur le dos, le défenseur assis à cheval sur lui : stabiliser, frapper et se relever.",
+              "orderIndex": 16
+            },
+            {
+              "title": "Techniques en position montée — Défenses : Le défenseur est sur le dos, l’agresseur est à cheval sur lui.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Techniques en position montée — Pontage (Possibilité de pousser avec un genou) et/ou double pontage pour renverser l’agresseur.",
+              "orderIndex": 18
+            },
+            {
+              "title": "Techniques en position montée — Défenses contre des frappes en se couvrant la tête et pontage.",
+              "orderIndex": 19
+            }
+          ]
+        },
+        {
+          "title": "UV6 — ARMES BLANCHES",
+          "orderIndex": 6,
+          "techniques": [
+            {
+              "title": "Utilisation d’objets sur place en tant qu'armes de défense, comme boucliers, ou armes blanches. Consignes de sécurité élémentaires.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Si un agresseur armé d’un couteau est à portée, agir avant le démarrage de son attaque : frappe selon la distance.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas :",
+              "orderIndex": 3
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas — Parade de l’avant-bras en 360°. Idem avec contre simultané. Possibilité de fuite ou coup de pied.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas — Coup de pied direct au buste avec ou sans avancée selon la distance. Le coup de pied est donné de préférence avec la jambe opposée à la main qui tient le couteau.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut :",
+              "orderIndex": 6
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut — Parade de l’avant-bras en 360°. Idem avec contre simultané. Possibilité de fuite ou coup de pied.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut — Coup de pied direct au buste sans avancée. Le coup de pied est donné au menton ou au buste et de préférence avec la jambe opposée à la main qui tient le couteau. Mise à jour 29 août 2025 Ceinture JAUNE - Krav Maga FEKM-RD 3 sur 3",
+              "orderIndex": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ORANGE",
+      "name": "Orange",
+      "orderIndex": 2,
+      "isActive": true,
+      "modules": [
+        {
+          "title": "UV1 — TECHNIQUES EN POSITION NEUTRE",
+          "orderIndex": 1,
+          "techniques": [
+            {
+              "title": "Coup de poing en uppercut.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coup de pied de défense en avant.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Coup de pied arrière uppercut.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Coups de pied en pas glissés : direct, circulaire et de côté.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Contre un coup de pied direct au corps ou aux parties génitales : défense intérieure avec la paume de la main ou l’intérieur de l’avant-bras selon la hauteur, avancer puis contre-attaque. Cette défense peut être réalisée également en tournant l’avant-bras, déviation effectuée par l’extérieur de l’avant-bras le poing fermé.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Contre un low-kick : bond en avant et contre-attaque.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Contre un coup de pied circulaire au corps : défense des deux avant-bras (sur la partie musclée intérieure) en avançant en diagonale et attaque en contre, poing ou pied.",
+              "orderIndex": 7
+            }
+          ]
+        },
+        {
+          "title": "UV2 — DEFENSES CONTRE SAISIES",
+          "orderIndex": 2,
+          "techniques": [
+            {
+              "title": "Dégagements d’étranglements :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Dégagements d’étranglements — Dégagement d’étranglement avant poussé : retrait d’un pas en levant un bras.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Dégagements d’étranglements — Dégagement d’une guillotine : saisie de l’avant-bras et coup de paume aux parties génitales. Possibilité de placer l’épaule.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Dégagements d’étranglements — Dégagement d’étranglement arrière poussé : avancée d’un pas en levant un bras.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Dégagements d’étranglements — Dégagement d’étranglement arrière avec l’avant-bras : prise du poignet, coup aux parties, demi-tour sous le bras, coup de genou et contrôle de l’agresseur en clé au sol.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Dégagements d’étranglements — Même étranglement et tout le poids vient sur le haut et en avant : projection immédiate.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Dégagements des saisies de poignets :",
+              "orderIndex": 7
+            },
+            {
+              "title": "Dégagements des saisies de poignets — Différentes saisies avec une main / deux mains.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Dégagements des saisies de poignets — Deux personnes qui saisissent les poignets : levier aidé du coude.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Dégagements des saisies de poignets — Idem avec au préalable un coup de pied porté au premier puis au second.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Dégagements des saisies de poignets — Lorsqu’un troisième agresseur arrive alors que l’on est déjà saisi par deux autres, c’est ce troisième agresseur qu’il faut attaquer en premier.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Sprawl : défense contre une tentative d’amenée au sol avec saisie des deux jambes (Double Leg). Si possible placer les bras au centre et se relever vers l’arrière ou sur le côté.",
+              "orderIndex": 12
+            }
+          ]
+        },
+        {
+          "title": "UV3 — CHUTES / ROULADES",
+          "orderIndex": 3,
+          "techniques": [
+            {
+              "title": "Chute arrière demi-tour volte-face.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Chute arrière en hauteur.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Chute sur le côté en hauteur.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Roulade sans se relever et amorti du bras (Judo). Mise à jour 29 août 2025 Ceinture ORANGE - Krav Maga FEKM-RD 1 sur 3",
+              "orderIndex": 4
+            }
+          ]
+        },
+        {
+          "title": "UV4 — TECHNIQUES EN POSITION DE GARDE ET TECHNIQUES DE COMBAT",
+          "orderIndex": 4,
+          "techniques": [
+            {
+              "title": "Coups de poing :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coups de poing — Uppercut.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Coups de poing — Coup direct avec le poing retourné.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Coups de poing — Coup de poing retourné en marteau, avec l’avant-bras ou le coude, selon la distance.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Coups de pied :",
+              "orderIndex": 5
+            },
+            {
+              "title": "Coups de pied — Coup de pied de défense en avant.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Coups de pied — Coup de pied arrière uppercut.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Coups de pied — Coups de pied en glissant sur le pied de la jambe d’appui : direct, circulaire et de côté.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Contre coup de poing direct au visage :",
+              "orderIndex": 9
+            },
+            {
+              "title": "Contre coup de poing direct au visage — Parade intérieure et riposte de la même main :",
+              "orderIndex": 10
+            },
+            {
+              "title": "Contre coup de poing direct au visage — Contre un direct du droit : défense intérieure de la paume gauche et riposte d’un direct du gauche.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Contre coup de poing direct au visage — Contre un direct du gauche : défense intérieure de la paume droite et riposte d’un direct du droit.",
+              "orderIndex": 12
+            },
+            {
+              "title": "Contre coup de poing direct au visage — Défense avec l’avant-bras avant :",
+              "orderIndex": 13
+            },
+            {
+              "title": "Contre coup de poing direct au visage — Contre un direct du droit : défense intérieure de l’avant-bras gauche et contre-attaque d’un direct du droit (possibilité d’attraper et baisser le bras de l’agresseur).",
+              "orderIndex": 14
+            },
+            {
+              "title": "Contre coup de poing direct au visage — Contre un direct du gauche : défense intérieure de l’avant-bras gauche et contre-attaque du gauche, poing retourné.",
+              "orderIndex": 15
+            },
+            {
+              "title": "Contre un coup de pied direct au corps :",
+              "orderIndex": 16
+            },
+            {
+              "title": "Contre un coup de pied direct au corps — Défense extérieure la paume tournée vers l’extérieur en se déplaçant et en attaquant en contre.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Contre un coup de pied direct au corps — Défense extérieure en piqué avec le bras arrière et contre-attaque.",
+              "orderIndex": 18
+            },
+            {
+              "title": "Contre low-kick : bond en avant et contre-attaque.",
+              "orderIndex": 19
+            },
+            {
+              "title": "Contre un coup de pied circulaire au corps :",
+              "orderIndex": 20
+            },
+            {
+              "title": "Contre un coup de pied circulaire au corps — Rotation du buste et défense des deux avants bras (sur la partie musclée intérieure) en avançant en diagonale et attaque en contre, poing ou pied.",
+              "orderIndex": 21
+            },
+            {
+              "title": "Contre un coup de pied circulaire au corps — Défense extérieure de l’avant-bras et coup de poing direct au visage en avançant.",
+              "orderIndex": 22
+            },
+            {
+              "title": "Esquive du buste vers l’arrière et contre-attaque en coup de pied direct contre un agresseur qui donne un coup de poing en avançant.",
+              "orderIndex": 23
+            },
+            {
+              "title": "Esquive du buste et contre du gauche / droit simultané.",
+              "orderIndex": 24
+            },
+            {
+              "title": "Saisies des deux jambes : Double Leg.",
+              "orderIndex": 25
+            }
+          ]
+        },
+        {
+          "title": "UV5 — SOL",
+          "orderIndex": 5,
+          "techniques": [
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur debout tente de passer sur le côté : replacement avec le pied sur ses hanches.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Le défenseur est sur le dos :",
+              "orderIndex": 2
+            },
+            {
+              "title": "Le défenseur est sur le dos — Garde de côté au sol :",
+              "orderIndex": 3
+            },
+            {
+              "title": "Le défenseur est sur le dos — Apprentissage de la position.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Le défenseur est sur le dos — Pied hanche / pied tête.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Le défenseur est sur le dos — Ciseaux.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Le défenseur est sur le dos — Garde sur le dos, l’agresseur est plaqué sur le défenseur :",
+              "orderIndex": 7
+            },
+            {
+              "title": "Le défenseur est sur le dos — Contrôle : saisir un bras et sa tête et frapper : doigts dans les yeux, coups de poing, de paume, de coude, de talon.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Le défenseur est sur le dos — Sortie : doigts dans les yeux pour le repousser, pied hanche / pied tête ou garde de côté à défaut.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Le défenseur est sur le dos — L’agresseur se relève depuis la garde :",
+              "orderIndex": 10
+            },
+            {
+              "title": "Le défenseur est sur le dos — Saisie des chevilles et le faire tomber en montant le bassin. Mise à jour 29 août 2025 Ceinture ORANGE - Krav Maga FEKM-RD 2 sur 3",
+              "orderIndex": 11
+            },
+            {
+              "title": "Le défenseur est sur le dos — Si l’agresseur se met debout en reculant une jambe : saisie de la cheville proche, crochetage avec le pied derrière le genou de la jambe la plus éloignée de l’agresseur et poussée de l’autre pied sur le bassin pour le faire tomber.",
+              "orderIndex": 12
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) :",
+              "orderIndex": 13
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) — Pontage : langouste en poussant la hanche de l’agresseur, sortir le genou (possibilité de s’aider en crochetant la cheville de l’agresseur avec l’autre jambe) et suite selon la distance de l’agresseur :",
+              "orderIndex": 14
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) — L’agresseur est éloigné : pied hanche / pied tête.",
+              "orderIndex": 15
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) — L’agresseur est proche : garder l’espace avec l’avant-bras ou doigts dans les yeux et passer en garde de côté.",
+              "orderIndex": 16
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) — L’agresseur est plaqué sur le défenseur : si possible doigts dans les yeux (si les bras sont sous ceux de l’agresseur : tendre le bras pour aider le mouvement et mettre les doigts dans les yeux), langouste puis pied hanche / pied tête.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) — Dégagement de saisie des poignets plaqués au sol (avant que les poignets ne touchent le sol) : pontage (possibilité de projection en baissant les mains ou de clé de poignet).",
+              "orderIndex": 18
+            }
+          ]
+        },
+        {
+          "title": "UV6 — ARMES BLANCHES",
+          "orderIndex": 6,
+          "techniques": [
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas — Parade de l’avant-bras en 360°, contre-attaques (2 coups minimum) en attrapant le bras de l’agresseur. Pas de désarmement.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas — Coup de pied direct au corps avec ou sans avancée selon la distance. La suite selon la situation. Pas de désarmement.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas — Coup de pied direct au corps en se déplaçant simultanément du côté opposé au couteau. La suite selon la situation et le besoin. Pas de désarmement.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut :",
+              "orderIndex": 5
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut — Parade de l’avant-bras en 360°, contre-attaques avec contrôle du bras armé. Pas de désarmement.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut — Coup de pied direct au corps ou au menton sans avancée. La suite selon la situation. Pas de désarmement.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut — Coup de pied direct au menton ou au corps en se déplaçant simultanément du côté opposé au couteau. La suite selon la situation. Pas de désarmement.",
+              "orderIndex": 8
+            }
+          ]
+        },
+        {
+          "title": "UV7 — COMBAT",
+          "orderIndex": 7,
+          "techniques": [
+            {
+              "title": "COMBAT",
+              "orderIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "VERTE",
+      "name": "Verte",
+      "orderIndex": 3,
+      "isActive": true,
+      "modules": [
+        {
+          "title": "UV1 — TECHNIQUES EN POSITION NEUTRE",
+          "orderIndex": 1,
+          "techniques": [
+            {
+              "title": "Coup du tranchant extérieur de la main ou de l’avant-bras.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coup de pied avec le tranchant du pied (gifle) :",
+              "orderIndex": 2
+            },
+            {
+              "title": "Coup de pied avec le tranchant du pied (gifle) — Avec le tranchant intérieur.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Coup de pied avec le tranchant du pied (gifle) — Avec le tranchant extérieur.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Coup de pied direct sauté en ciseau.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Contre coups de pieds directs :",
+              "orderIndex": 6
+            },
+            {
+              "title": "Contre coups de pieds directs — Se décaler sur le côté intérieur de l’agresseur et donner un coup de pied direct aux parties génitales. Le coup de pied est donné avec la jambe droite si le déplacement est à droite et vice versa.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Contre coups de pieds directs — Saut de côté et coup de poing simultané. Le coup de poing est donné avec le bras droit si le déplacement est à droite et vice versa.",
+              "orderIndex": 8
+            }
+          ]
+        },
+        {
+          "title": "UV2 — DEFENSES CONTRE SAISIES",
+          "orderIndex": 2,
+          "techniques": [
+            {
+              "title": "Dégagements de prises de cheveux :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Dégagements de prises de cheveux — Contre une saisie de face sans tirer : bond en arrière en frappant sur le dos de la main qui agrippe, blocage de cette main sur le crâne, coup de pied direct aux parties génitales, torsion du poignet en se penchant vers l’avant, déplacement vers l’arrière et contre-attaque en fonction. Variante après le coup de pied aux parties, torsion du poignet du partenaire sur le côté et clé de coude ou d’épaule avec possibilité d’amener au sol.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Dégagements de prises de cheveux — Contre une saisie de face en tirant : bond en avant avec un avant-bras en protection et contre-attaque de la paume de l’autre main aux parties génitales.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Dégagements de prises de cheveux — Contre une saisie de côté en tirant : avancée d’un bond en direction de l’agresseur, un avant-bras en protection et contre-attaque de la paume aux parties génitales et du coude au visage ou au buste.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Dégagements de prises de cheveux — Contre une saisie de côté avec la main qui agrippe les cheveux sur la tempe la plus éloignée de lui : retournement rapide dans la direction de la prise avec un avant-bras en protection et contre-attaque de l’autre main aux parties génitales.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Dégagements de prises de cheveux — Contre une saisie de dos en tirant : retournement rapide dans la direction de la prise avec un avant-bras en protection et contre-attaque de l’autre main aux parties génitales.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Dégagements d’étreinte avant :",
+              "orderIndex": 7
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Contre une étreinte fermée (bras pris) : poussée des mains aux parties génitales, coup de genou au même endroit, dégagement d’un bras et contre-attaques. Possibilité de crier dans l’oreille ou de mordre au cou.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Contre une étreinte ouverte (bras libres) :",
+              "orderIndex": 9
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Poussée du nez ou des pouces dans les yeux. Cette technique n’est pas faite pour endommager les yeux, mais pour faciliter la poussée.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Tirer les cheveux ou plaquer un doigt dans l’œil et effectuer un mouvement de levier sur le menton.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Contre une étreinte ouverte basse :",
+              "orderIndex": 12
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Contre-attaque avec coups portés comme coup de coude (sur la nuque) et coup de genou (aux parties génitales). Contrôle absolu des coups.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Tirer les cheveux ou plaquer un doigt dans l’œil en frappant de la paume de l’autre main sur la face de l’agresseur, puis effectuer le mouvement de levier sur le menton.",
+              "orderIndex": 14
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Défenses contre saisie de jambes avec tentative d’amener au sol : placer l’avant-bras sur son menton et effectuer une clé de nuque en rotation ; possibilité de mettre aussi les doigts dans les yeux.",
+              "orderIndex": 15
+            },
+            {
+              "title": "Dégagements d’étreinte avant — Contre une étreinte fermée ou ouverte en soulevant : coup de genou, dégager la main puis attaque en contre.",
+              "orderIndex": 16
+            },
+            {
+              "title": "Dégagement d’étreinte de côté :",
+              "orderIndex": 17
+            },
+            {
+              "title": "Dégagement d’étreinte de côté — Retrait du bassin et frappe de la paume de la main la plus éloignée de l’agresseur aux parties génitales. Mise à jour 29 août 2025 Ceinture VERTE - Krav Maga FEKM-RD 1 sur 4",
+              "orderIndex": 18
+            },
+            {
+              "title": "Dégagement d’étreinte de côté — Contre une étreinte de côté soulevée : coup de talon aux parties de la jambe la plus éloignée.",
+              "orderIndex": 19
+            },
+            {
+              "title": "Dégagement d’étreinte arrière :",
+              "orderIndex": 20
+            },
+            {
+              "title": "Dégagement d’étreinte arrière — Contre une étreinte fermée (bras pris) : coups de la paume entre les jambes, coup de talon sur le tibia et coup de talon sur le pied de l’agresseur, si possible coup de pied uppercut aux parties génitales, dégagement d’au moins un bras et coup de coude arrière.",
+              "orderIndex": 21
+            },
+            {
+              "title": "Dégagement d’étreinte arrière — Contre une étreinte ouverte (bras libres) : pencher le buste en avant et donner plusieurs coups de coude au visage, coups de pied au tibia ou sur le pied, prise d’un doigt et levier. Demi-tour et coup de pied aux parties génitales.",
+              "orderIndex": 22
+            },
+            {
+              "title": "Dégagement d’étreinte arrière — Contre une étreinte fermée ou ouverte en soulevant : coup de pied uppercut aux parties génitales, dégagement d’un bras et contre-attaques.",
+              "orderIndex": 23
+            }
+          ]
+        },
+        {
+          "title": "UV3 — CHUTES / ROULADES",
+          "orderIndex": 3,
+          "techniques": [
+            {
+              "title": "Roulade avant plombée : distance, hauteur.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Roulade sur le côté.",
+              "orderIndex": 2
+            }
+          ]
+        },
+        {
+          "title": "UV4 — TECHNIQUES EN POSITION DE GARDE ET TECHNIQUES DE COMBAT",
+          "orderIndex": 4,
+          "techniques": [
+            {
+              "title": "Swing.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coup du tranchant extérieur de la main ou de l’avant-bras.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Coups de pied :",
+              "orderIndex": 3
+            },
+            {
+              "title": "Coups de pied — Coup de pied avec le tranchant du pied (gifle) :",
+              "orderIndex": 4
+            },
+            {
+              "title": "Coups de pied — Avec le tranchant extérieur.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Coups de pied — Avec le tranchant intérieur.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Coups de pied — Coup de pied circulaire arrière (porté avec le talon).",
+              "orderIndex": 7
+            },
+            {
+              "title": "Coups de pied — Coup de pied direct donné avec le pied arrière en amenant le pied de la jambe avant en arrière simultanément.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Coups de pied — Coup de pied direct sauté en ciseau.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Coups de pied — Coups de pied retournés :",
+              "orderIndex": 10
+            },
+            {
+              "title": "Coups de pied — Uppercut.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Coups de pied — Direct.",
+              "orderIndex": 12
+            },
+            {
+              "title": "Coups de pied — De côté.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Coups de pied — Circulaire.",
+              "orderIndex": 14
+            },
+            {
+              "title": "Coups de pied — Gifle.",
+              "orderIndex": 15
+            },
+            {
+              "title": "Contre coup de poing direct au visage du bras droit (arrière) :",
+              "orderIndex": 16
+            },
+            {
+              "title": "Contre coup de poing direct au visage du bras droit (arrière) — Défense intérieure de l’avant-bras gauche en glissant sur le bras de l’agresseur. Fin de la défense en portant un coup de poing.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Contre coup de poing direct au visage du bras droit (arrière) — Défense extérieure de l’avant-bras gauche en glissant sous le bras de l’agresseur. Même principe.",
+              "orderIndex": 18
+            },
+            {
+              "title": "Contre coups de poing directs gauche / droit enchaînés au visage :",
+              "orderIndex": 19
+            },
+            {
+              "title": "Contre coups de poing directs gauche / droit enchaînés au visage — Deux défenses intérieures avec la paume et contre-attaque du poing ou du pied.",
+              "orderIndex": 20
+            },
+            {
+              "title": "Contre coups de poing directs gauche / droit enchaînés au visage — Retrait du buste vers l’arrière au moment où l’agresseur donne le direct du gauche et défense vers le bas en ramenant le buste vers l’avant et en attaquant simultanément en direct du droit.",
+              "orderIndex": 21
+            },
+            {
+              "title": "Contre coup de poing bas :",
+              "orderIndex": 22
+            },
+            {
+              "title": "Contre coup de poing bas — Défense en blocage dur.",
+              "orderIndex": 23
+            },
+            {
+              "title": "Contre coup de poing bas — Défense extérieure en chassant le bras de l’agresseur, la paume du défenseur tournée vers l’extérieur.",
+              "orderIndex": 24
+            },
+            {
+              "title": "Contre un coup de pied direct :",
+              "orderIndex": 25
+            },
+            {
+              "title": "Contre un coup de pied direct — Se décaler du côté de la jambe avant et donner un coup de pied aux parties génitales de cette jambe.",
+              "orderIndex": 26
+            },
+            {
+              "title": "Contre un coup de pied direct — Saut de côté et coup de poing simultané du bras avant, coup de pied direct jambe arrière. Mise à jour 29 août 2025 Ceinture VERTE - Krav Maga FEKM-RD 2 sur 4",
+              "orderIndex": 27
+            },
+            {
+              "title": "La main de l’agresseur est fermée : saisie du poignet et du poing, suivre le mouvement en tirant ou en poussant.",
+              "orderIndex": 28
+            },
+            {
+              "title": "La main de l’agresseur est ouverte : saisie avec les pouces sur le dos de la main et les doigts sur la paume, suivre le mouvement en tirant ou en poussant.",
+              "orderIndex": 29
+            },
+            {
+              "title": "En utilisant le coude en tirant ou en poussant.",
+              "orderIndex": 30
+            }
+          ]
+        },
+        {
+          "title": "UV5 — SOL",
+          "orderIndex": 5,
+          "techniques": [
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) et plaque sa tête sur le ventre du défenseur :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Pousser sa tête vers le bas en faisant un mouvement de langouste, coup de coude sur la tête et se relever.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Doigt dans l’œil, langouste puis en fonction de la distance :",
+              "orderIndex": 3
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) et plaque sa tête sur le ventre du — Pied hanche / pied tête puis se relever.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) et plaque sa tête sur le ventre du — Garde de côté.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) : dégagement d’étranglement à deux mains.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) : dégagement d’étranglement à deux — Dégagement d’une des mains qui étranglent et coup porté avec les doigts de l’autre main vers les yeux.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) : dégagement d’étranglement à deux — Crochetage vers les bas des mains qui étranglent, pontage et projection de l’agresseur en diagonale vers l’avant. Attaques en contre et se relever.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) : dégagement d’étranglement à deux — Le poids du corps de l’agresseur est placé sur le cou du défenseur, les bras sont tendus : coup porté sous les coudes, pontage et projection en diagonale. Attaques en contre et se relever.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) : dégagement d’étranglement à deux — Les deux têtes sont rapprochées :",
+              "orderIndex": 10
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) : dégagement d’étranglement à deux — Crochetage de l’une des mains qui étrangle et poussée d’un doigt de l’autre main dans l’œil de l’agresseur (ou avec la main sur la hanche si l’œil n’est pas atteignable). Pontage du côté de la main contrôlée.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) : dégagement d’étranglement à deux — Crochetage de l’une des mains qui étrangle et frappe de l’autre avant-bras sur la nuque. Pontage du côté de la tête de l’agresseur.",
+              "orderIndex": 12
+            },
+            {
+              "title": "Position en croix :",
+              "orderIndex": 13
+            },
+            {
+              "title": "Position en croix — Apprentissage de la position en croix. Le défenseur est allongé sur l’agresseur à 90°. Le genou côté hanche est fléchi et plus haut que la ceinture de l’agresseur. Frapper et se relever.",
+              "orderIndex": 14
+            },
+            {
+              "title": "Position en croix — Le défenseur est sur le dos, l’agresseur prend la position en croix : doigts dans les yeux et / ou morsure si possible et pontage (si les bras sont sous ceux de l’agresseur, tendre le bras pour aider le pontage), langouste puis :",
+              "orderIndex": 15
+            },
+            {
+              "title": "Position en croix — Si l’agresseur est éloigné : pied hanche / pied tête puis se relever.",
+              "orderIndex": 16
+            },
+            {
+              "title": "Position en croix — Si l’agresseur est proche : garde de côté.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Position en croix — Si l’agresseur se plaque : langouste et reprise en garde.",
+              "orderIndex": 18
+            }
+          ]
+        },
+        {
+          "title": "UV6 — ARMES BLANCHES",
+          "orderIndex": 6,
+          "techniques": [
+            {
+              "title": "Utilisation du couteau. Apprentissage des différentes saisies : de haut en bas, de bas en haut, en piqué et en rasoir.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de haut en bas : Parade de l’avant-bras en 360°, contre-attaques en attrapant le bras de l’agresseur et désarmement.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Défenses contre des attaques au couteau de bas en haut : Parade de l’avant-bras en 360°, contre-attaques et désarmement.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Défenses contre des attaques au couteau en piqué :",
+              "orderIndex": 4
+            },
+            {
+              "title": "Défenses contre des attaques au couteau en piqué — Coup de pied direct au buste ou à l’aisselle. Il est préférable d’utiliser la jambe opposée à la main armée de l’agresseur.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Défenses contre des attaques au couteau en piqué — Esquive du buste sur le côté en avançant et coup de pied circulaire / de côté.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Défenses contre des attaques au couteau en piqué — Défense intérieure de l’avant-bras gauche (contre une attaque de la main droite) en parade glissée ou en déviant, coup de poing direct du droit, enchaînement de frappes avec contrôle du bras armé et désarmement.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Défenses contre des attaques au couteau en piqué — Défense intérieure de l’avant-bras droit (contre une attaque de la main droite), changement de main, saisie du bras armé, attaque de l’autre et désarmement. Mise à jour 29 août 2025 Ceinture VERTE - Krav Maga FEKM-RD 3 sur 4",
+              "orderIndex": 8
+            }
+          ]
+        },
+        {
+          "title": "UV7 — COMBAT",
+          "orderIndex": 7,
+          "techniques": [
+            {
+              "title": "COMBAT",
+              "orderIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "BLEUE",
+      "name": "Bleue",
+      "orderIndex": 4,
+      "isActive": true,
+      "modules": [
+        {
+          "title": "UV1 — TECHNIQUES EN POSITION NEUTRE",
+          "orderIndex": 1,
+          "techniques": [
+            {
+              "title": "Coup du tranchant intérieur de l’avant-bras.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Contre un coup de poing direct au visage, l’agresseur étant sur le côté :",
+              "orderIndex": 2
+            },
+            {
+              "title": "Contre un coup de poing direct au visage, l’agresseur étant sur le côté — L’agresseur est sur la gauche : défense extérieure de la main gauche avec la paume tournée vers l’extérieur contre une gauche, déplacement puis contre du poing droit.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Contre un coup de poing direct au visage, l’agresseur étant sur le côté — L’agresseur est sur la droite : défense extérieure de la main droite avec la paume tournée vers l’extérieur contre une droite, déplacement puis contre du poing gauche. Dans les deux cas on attrapera le bras de l’agresseur si c’est possible.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Contre un coup de pied circulaire au corps ou au visage : bond en avant et défense avec les deux bras placés en croix, un en bas, l’autre en haut et contre-attaque. Possibilité de projection de l’agresseur.",
+              "orderIndex": 5
+            }
+          ]
+        },
+        {
+          "title": "UV2 — DEFENSES CONTRE SAISIES",
+          "orderIndex": 2,
+          "techniques": [
+            {
+              "title": "Dégagement d’une saisie à une main de face d’une veste ou d’un autre vêtement solide :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Dégagement d’une saisie à une main de face d’une veste ou d’un autre vêtement solide — Contre-attaques en coups de pied et de poing s’il n’existe aucune autre alternative.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Dégagement d’une saisie à une main de face d’une veste ou d’un autre vêtement solide — Retrait d’un pas et abaisser rapidement le bras vers l’intérieur d’un mouvement circulaire.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Dégagement d’une saisie à une main de face d’une veste ou d’un autre vêtement solide — Même exercice et continuer avec une clé de coude ou d’épaule.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Dégagement d’une saisie à une main de face d’une veste ou d’un autre vêtement solide — Retrait d’un pas et abaisser rapidement le bras vers l’extérieur d’un mouvement circulaire.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Dégagement d’une saisie à une main de face d’une veste ou d’un autre vêtement solide — Clé sur le pouce de la main qui saisit. L’autre main prend solidement le poignet de l’agresseur.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Dégagement d’une saisie à deux mains de face d’une veste ou d’un autre vêtement solide :",
+              "orderIndex": 7
+            },
+            {
+              "title": "Dégagement d’une saisie à deux mains de face d’une veste ou d’un autre vêtement solide — Retrait d’un pas en pivotant le buste, le bras levé et ramené à l’intérieur, contre-attaque en coup du marteau, du tranchant de la main ou du coude et coup de genou.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Dégagement d’une saisie à deux mains de face d’une veste ou d’un autre vêtement solide — Retrait d’un pas en pivotant le buste, saisie de la main de l’agresseur et retour rapide de l’autre côté en effectuant une clé au poignet et au coude de l’agresseur.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Dégagement d’une saisie à deux mains de face d’une veste ou d’un autre vêtement solide — Clé sur le pouce.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Dégagement d’une saisie de dos, de l’épaule ou du vêtement, en tirant ou en poussant : lever le bras du côté de la saisie en se retournant et avancer vers l'agresseur en contre-attaquant.",
+              "orderIndex": 11
+            }
+          ]
+        },
+        {
+          "title": "UV3 — CHUTES / ROULADES",
+          "orderIndex": 3,
+          "techniques": [
+            {
+              "title": "CHUTES / ROULADES",
+              "orderIndex": 1
+            }
+          ]
+        },
+        {
+          "title": "UV4 — TECHNIQUES EN POSITION DE GARDE ET TECHNIQUES DE COMBAT",
+          "orderIndex": 4,
+          "techniques": [
+            {
+              "title": "Coup de pied de haut en bas avec le marteau, porté avec le talon (Kakato).",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coup du tranchant intérieur de l’avant-bras. Mise à jour 29 août 2025 Ceinture BLEUE - Krav Maga FEKM-RD 1 sur 3",
+              "orderIndex": 2
+            },
+            {
+              "title": "Défenses extérieures (si la main avant est basse) contre un direct du droit :",
+              "orderIndex": 3
+            },
+            {
+              "title": "Défenses extérieures (si la main avant est basse) contre un direct du droit — Position de garde de côté",
+              "orderIndex": 4
+            },
+            {
+              "title": "Défenses extérieures (si la main avant est basse) contre un direct du droit — Parades :",
+              "orderIndex": 5
+            },
+            {
+              "title": "Défenses extérieures (si la main avant est basse) contre un direct du droit — Parade extérieure avec le dos de la main à l’extérieur et contre simultané de l’autre poing.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Défenses extérieures (si la main avant est basse) contre un direct du droit — Même défense, l’avant-bras est plus déplié afin d’intercepter plus tôt l’attaque.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Défenses extérieures (si la main avant est basse) contre un direct du droit — L’avant-bras se lève en diagonale et accompagne le bras attaquant au-dessus de la tête, contre simultané de l’autre poing.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Défense contre coup de pied de côté :",
+              "orderIndex": 9
+            },
+            {
+              "title": "Défense contre coup de pied de côté — Parade de la main avant (paume orientée vers l’extérieur) qui chasse la jambe de l’agresseur, tout en reculant. Le poids du corps est sur le pied arrière. Attaque en contre.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Défense contre coup de pied de côté — Parade de la main avant (paume orientée vers l’extérieur) qui chasse la jambe de l’agresseur, en même temps qu’on décale la jambe arrière sur le côté et contre-attaque.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Défense contre coup de pied de côté — Parade de la main arrière (paume orientée vers l’extérieur) qui chasse la jambe de l’agresseur, en même temps qu’on avance en diagonale la jambe avant et contre-attaque.",
+              "orderIndex": 12
+            },
+            {
+              "title": "Défense contre coup de pied de côté — Défense extérieure en piqué du bras arrière et contre-attaque. Le choc de la déviation se fera sur la partie extérieure de l’avant-bras.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Défense contre coup de pied de côté — Contre un coup porté au niveau moyen ou haut : défense intérieure avec l’intérieur de l’avant-bras avant et contre-attaque.",
+              "orderIndex": 14
+            },
+            {
+              "title": "Défense contre coup de pied circulaire :",
+              "orderIndex": 15
+            },
+            {
+              "title": "Défense contre coup de pied circulaire — Contre coup de pied circulaire : bond en avant et défense avec les deux bras placés en croix, un en bas, l’autre en haut et contre-attaque. Possibilité de projection de l’agresseur. La position des bras peut être utilisée contre un coup de pied entre les jambes.",
+              "orderIndex": 16
+            },
+            {
+              "title": "Défense contre coup de pied circulaire — Contre coup de pied circulaire haut : parade de l’avant-bras, soulever la jambe qui frappe au-dessus de la tête, dans le même mouvement se redresser en projetant l’agresseur et contre-attaquer.",
+              "orderIndex": 17
+            },
+            {
+              "title": "Défense contre coup de pied circulaire arrière : bond en avant et défense avec les deux bras placés en croix, un en bas, l’autre en haut et contre-attaque. Possibilité de projection de l’agresseur.",
+              "orderIndex": 18
+            },
+            {
+              "title": "Défense contre coup de pied retourné : coup de pied à l’arrière de l’agresseur au début de son attaque.",
+              "orderIndex": 19
+            },
+            {
+              "title": "Fauchage de la jambe avant en coup de pied circulaire de la jambe avant. Possibilité d’avancer en pas chassé.",
+              "orderIndex": 20
+            },
+            {
+              "title": "Fauchage de la jambe avant en coup de pied circulaire de la jambe arrière.",
+              "orderIndex": 21
+            },
+            {
+              "title": "Fauchage de la jambe en diagonale vers l’extérieur et en arrière (O-Soto-Gari).",
+              "orderIndex": 22
+            },
+            {
+              "title": "Projection de hanches en saisissant la tête. Possibilité de sortir une jambe en fauchage.",
+              "orderIndex": 23
+            },
+            {
+              "title": "Projection de hanches en saisissant les hanches. Possibilité de sortir une jambe en fauchage.",
+              "orderIndex": 24
+            },
+            {
+              "title": "Projection d’épaule. Possibilité de sortir une jambe en fauchage.",
+              "orderIndex": 25
+            },
+            {
+              "title": "Crochetage extérieur ou intérieur de la jambe avant ou de la jambe arrière.",
+              "orderIndex": 26
+            },
+            {
+              "title": "Barrage des jambes de l’agresseur vers l’arrière par la jambe du défenseur.",
+              "orderIndex": 27
+            }
+          ]
+        },
+        {
+          "title": "UV5 — SOL",
+          "orderIndex": 5,
+          "techniques": [
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) — L’agresseur l’étrangle avec son avant-bras : doigts dans les yeux et tendre les jambes, langouste puis :",
+              "orderIndex": 2
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) — Si l’agresseur est éloigné : pied hanche / pied tête puis se relever.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) — Si l’agresseur est proche : garde de côté.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) — Technique anti-viol. L’agresseur a les bras sous les jambes du défenseur :",
+              "orderIndex": 5
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) — Possibilité de repousser l’agresseur avec les doigts dans les yeux, tendre une jambe puis frapper en coups de pied au visage.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est entre ses jambes (dans sa garde) — Compression du larynx : poser les mains sur la gorge de l’agresseur, croiser les jambes et serrer.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est à cheval sur lui (position montée) et l’étrangle avec son avant-bras : bloquer le bras et pontage du côté du bras qui étrangle.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est sur le côté et l’étrangle à deux mains :",
+              "orderIndex": 9
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est sur le côté et l’étrangle à deux mains — Crochetage d’une des mains qui étranglent, éloignement de l’agresseur en poussant l’autre main et introduction du genou. Coup de talon ou de tibia porté à la tête de l’autre jambe. Se relever. Mise à jour 29 août 2025 Ceinture BLEUE - Krav Maga FEKM-RD 2 sur 3",
+              "orderIndex": 10
+            },
+            {
+              "title": "Le défenseur est sur le dos, l’agresseur est sur le côté et l’étrangle à deux mains — Même exercice mais, au lieu d’un coup de pied, enroulement de la tête avec la jambe et clé de coude ou coup de talon. Se relever.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Dégagement d’une saisie en guillotine :",
+              "orderIndex": 12
+            },
+            {
+              "title": "Dégagement d’une saisie en guillotine — Doigts dans les yeux si c’est possible.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Dégagement d’une saisie en guillotine — Si les yeux ne sont pas accessibles, passer la main dans le dos, se déplacer et compresser le cou de l’agresseur avec l’épaule. Si ça ne fonctionne pas, réessayer les doigts dans les yeux.",
+              "orderIndex": 14
+            }
+          ]
+        },
+        {
+          "title": "UV6 — ARMES BLANCHES",
+          "orderIndex": 6,
+          "techniques": [
+            {
+              "title": "Avant l’attaque, possibilité de jeter un objet léger en direction de l’agresseur et suivre aussitôt en contre-attaques. Cette technique peut être efficace contre tout type d’agression au couteau.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coup de pied direct.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Esquive du buste vers l’arrière et :",
+              "orderIndex": 3
+            },
+            {
+              "title": "Esquive du buste vers l’arrière et — Parade des deux avant-bras, contrôle du bras armé avec le bras gauche et frappe simultanée du droit. Désarmement.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Esquive du buste vers l’arrière et — Parade des deux avant-bras, contre du gauche, puis du droit avec contrôle continu du bras armé. Désarmement.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Esquive du buste vers l’arrière et — Parade et contrôle de l’avant-bras gauche, contre du droit simultané. Désarmement.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Si l’agresseur est très proche, possibilité de parer l’attaque dès le premier coup en 360° avec la partie extérieure charnue de l’avant-bras. DÉFENSES CONTRE ATTAQUES AU BÂTON",
+              "orderIndex": 7
+            },
+            {
+              "title": "Défenses contre coup de bâton de haut en bas :",
+              "orderIndex": 8
+            },
+            {
+              "title": "Défenses contre coup de bâton de haut en bas — Attaque à une main angle ouvert : bond en avant à l’intérieur avec une parade extérieure en piqué du bras face au bâton tout en se penchant vers l’avant et en donnant un coup de poing direct simultanément. Contre- attaques et désarmement.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Défenses contre coup de bâton de haut en bas — Attaque sur l’axe central à une main (angle fermé) ou à deux mains : bond en avant et parade extérieure en piqué tout en se penchant vers l’avant. La suite de la riposte sera différente selon que l’on avancera une jambe ou l’autre.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Défense contre coup de bâton circulaire ou en revers au-dessus de la ceinture : bond en avant avec les deux bras placés en croix, un en bas, l’autre en haut, prise du bras et contre-attaque.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Défense contre coup de bâton circulaire ou en revers visant les jambes : bond en avant en levant la jambe en direction de la main armée et contre-attaque.",
+              "orderIndex": 12
+            }
+          ]
+        },
+        {
+          "title": "UV7 — COMBAT",
+          "orderIndex": 7,
+          "techniques": [
+            {
+              "title": "Combat à distance de corps à corps : coups de tête, de coude, de genou, doigts dans les yeux, projections, balayages, clés, morsure. Travail souple et contrôle absolu des coups.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Combat sans arme 2 x 2 minutes avec 30 secondes de repos entre les reprises. Les coups sont portés pour les candidats de 18 ans à 40 ans et le combat est souple pour les autres. Les candidats ne sont pas jugés au nombre de points. Ils sont évalués sur leur attitude générale et non en fonction du gagnant ou du perdant. Ils ne doivent pas se dérober et faire preuve de courage, de détermination, de lucidité, de sang- froid, d’un minimum technique et de respect du partenaire. Protections obligatoires : gants de boxe minimum 12 oz, coquille, protège-tibias et protège-dents. Protège-genoux et protège-poitrine (pour les femmes) recommandés. Un certain nombre de consignes de sécurité sont à respecter : • Si un combattant est durement touché, l’enchaînement qui suit doit être léger ou stoppé suivant le degré de dureté. • Si un combattant a l’occasion de donner un coup de tête ou de toucher des endroits non protégés et fragiles comme les cervicales, le coup doit être simulé. • Si un combattant est touché à la coquille, il doit rompre et faire un pas ou deux de côté pour signifier au minimum l’avantage qu’aurait pris son partenaire. • Lors d’une projection le combattant doit veiller à respecter la sécurité du combattant adverse. Mise à jour 29 août 2025 Ceinture BLEUE - Krav Maga FEKM-RD 3 sur 3",
+              "orderIndex": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "MARRON",
+      "name": "Marron",
+      "orderIndex": 5,
+      "isActive": true,
+      "modules": [
+        {
+          "title": "UV1 — TECHNIQUES EN POSITION NEUTRE",
+          "orderIndex": 1,
+          "techniques": [
+            {
+              "title": "Enchaînement de deux coups de pied :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Enchaînement de deux coups de pied — Deux coups de pied directs.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Enchaînement de deux coups de pied — Coup de pied direct et coup de pied circulaire.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Enchaînement de deux coups de pied — Coup de pied de face extérieur (gifle) et coup de pied direct.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Coups de pied sautés donnés avec un ou plusieurs pas d’élan :",
+              "orderIndex": 5
+            },
+            {
+              "title": "Coups de pied sautés donnés avec un ou plusieurs pas d’élan — Coup de genou sauté direct.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Coups de pied sautés donnés avec un ou plusieurs pas d’élan — Coup de genou sauté circulaire.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Coups de pied sautés donnés avec un ou plusieurs pas d’élan — Coup de pied sauté direct.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Coups de pied sautés donnés avec un ou plusieurs pas d’élan — Coup de pied sauté circulaire.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Coups de pied sautés donnés avec un ou plusieurs pas d’élan — Coup de pied sauté de côté.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Coups de pied sautés donnés avec un ou plusieurs pas d’élan — Coup de pied sauté direct au milieu du corps, avant de retomber au sol, saisie de l’agresseur et attaque de l’autre main en coup de poing direct, coup du marteau ou du tranchant de la main.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Contre plusieurs agresseurs qui encerclent le défenseur : feinte de retrait puis bond en avant et coups avec les avant-bras.",
+              "orderIndex": 12
+            }
+          ]
+        },
+        {
+          "title": "UV2 — DEFENSES CONTRE SAISIES",
+          "orderIndex": 2,
+          "techniques": [
+            {
+              "title": "Dégagement d’une prise de cou de côté :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Dégagement d’une prise de cou de côté — L’agresseur baisse en tournant : suivre le mouvement vers l’avant et projection.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Dégagement d’une prise de cou de côté — Pression vers le bas sur les cervicales : projection arrière avec la jambe en barrage.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Dégagement du double Nelson :",
+              "orderIndex": 4
+            },
+            {
+              "title": "Dégagement du double Nelson — Abaisser fermement les bras, coups de coude au visage, prise d’un doigt et levier sur celui-ci. Possibilité de donner un coup de talon aux parties génitales.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Dégagement du double Nelson — Projection avant.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Dégagement du double Nelson — Projection arrière.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Dégagement d’étreinte :",
+              "orderIndex": 8
+            },
+            {
+              "title": "Dégagement d’étreinte — Avant poussée : retrait d’un pas en donnant un coup avec l’avant-bras. Suite en projection ou en clé de nuque.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Dégagement d’étreinte — Arrière fermée poussée : projection avant. Possibilité de mettre la jambe en barrage.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Dégagement d’étreinte — Arrière ouverte poussée : projection avant. Possibilité de mettre la jambe en barrage.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Dégagement de clé de poignet dans le dos (clé du policier) :",
+              "orderIndex": 12
+            },
+            {
+              "title": "Dégagement de clé de poignet dans le dos (clé du policier) — Coup de coude dans le mouvement.",
+              "orderIndex": 13
+            },
+            {
+              "title": "Dégagement de clé de poignet dans le dos (clé du policier) — Inclinaison du buste, descente au sol et coup de pied.",
+              "orderIndex": 14
+            }
+          ]
+        },
+        {
+          "title": "UV3 — CHUTES / ROULADES",
+          "orderIndex": 3,
+          "techniques": [
+            {
+              "title": "CHUTES / ROULADES",
+              "orderIndex": 1
+            }
+          ]
+        },
+        {
+          "title": "UV4 — TECHNIQUES EN POSITION DE GARDE ET TECHNIQUES DE COMBAT",
+          "orderIndex": 4,
+          "techniques": [
+            {
+              "title": "Coups de pied sautés :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coups de pied sautés — Coup de genou sauté direct.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Coups de pied sautés — Coup de genou sauté circulaire.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Coups de pied sautés — Coup de pied sauté direct.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Coups de pied sautés — Coup de pied sauté retourné de côté.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Coups de pied sautés — Coup de pied sauté retourné avec le talon.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Coups de pied sautés — Coup de pied sauté retourné avec le tranchant du pied.",
+              "orderIndex": 7
+            },
+            {
+              "title": "Coups de pied sautés — Coup de pied direct, se retourner et coup de pied sauté intérieur en gifle avec le même pied.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Coups de pied sautés — Coup de pied circulaire, se retourner et coup de pied sauté intérieur en gifle avec le même pied.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Coups de pied sautés — Coup de pied circulaire, se retourner et coup de pied sauté circulaire avec le même pied.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Défenses et ripostes contre un coup de poing ou pied non connu à l’avance (5 fois). Dans cet exercice plusieurs règles s’imposent : • Ne pas reculer sur l’attaque du partenaire. • Défense et contre-attaque simultanée dans la mesure du possible. • Même si on est touché, réagir en contre-attaque. • Après la défense et la première contre-attaque, aucun mouvement ne doit être inutile dans les enchaînements suivants.",
+              "orderIndex": 11
+            }
+          ]
+        },
+        {
+          "title": "UV5 — SOL",
+          "orderIndex": 5,
+          "techniques": [
+            {
+              "title": "Défenseur au sol, assis ou allongé, agresseur debout, techniques de déséquilibre :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Défenseur au sol, assis ou allongé, agresseur debout, techniques de déséquilibre — Ecarter les deux jambes de l’agresseur en chassant ses chevilles vers l’extérieur avec des frappes répétées de nos pieds, et coup de pied aux parties génitales.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Défenseur au sol, assis ou allongé, agresseur debout, techniques de déséquilibre — Crochetage d’un talon et pousser sur la rotule avec l’autre jambe.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Défenseur au sol, assis ou allongé, agresseur debout, techniques de déséquilibre — Technique de la ceinture orange : saisie de la cheville proche, crochetage avec le pied derrière le genou de la jambe la plus éloignée de l’agresseur et poussée de l’autre pied sur le bassin pour le faire tomber.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Dégagement d’une saisie en étreinte de cou de côté avec l’avant-bras (même saisie que debout mais à genoux) : prise d’un point sensible (œil, nez, cheveux, barbe, commissure des lèvres) et frappe aux parties génitales de l’autre main en en le renversant.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Dégagement d’une clé de coude (Juji-gatame) : avant le verrouillage de la clé, pivot du pouce vers l’extérieur et déplacement du corps pour sortir de la clé.",
+              "orderIndex": 6
+            },
+            {
+              "title": "Dégagement d’une saisie du cou sur le côté (contrôle latéro-costal), de type judo :",
+              "orderIndex": 7
+            },
+            {
+              "title": "Dégagement d’une saisie du cou sur le côté (contrôle latéro-costal), de type judo — Apprentissage de la position.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Dégagement d’une saisie du cou sur le côté (contrôle latéro-costal), de type judo — Le défenseur est sur le dos, l’agresseur en position de contrôle latéro-costal :",
+              "orderIndex": 9
+            },
+            {
+              "title": "Dégagement d’une saisie du cou sur le côté (contrôle latéro-costal), de type judo — Prise d’un point sensible de la tête (œil, cheveux barbe, sous le nez, commissure des lèvres) de l’agresseur et le faire passer par-dessus soi ou s’effacer et le pousser dans la direction de son dos selon sa réaction. Se stabiliser et contre attaquer. Se relever.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Dégagement d’une saisie du cou sur le côté (contrôle latéro-costal), de type judo — Si l’agresseur a la tête haute : enrouler sa tête avec la jambe la plus éloignée et ramener cette jambe fermement vers le sol. Frapper et se relever.",
+              "orderIndex": 11
+            },
+            {
+              "title": "Dégagement d’une saisie du cou sur le côté (contrôle latéro-costal), de type judo — Si l’agresseur colle sa tête vers le sol en avant : frapper sa nuque avec la paume de la main opposée puis reprendre un point sensible de la tête pour le renverser. Mise à jour 29 août 2025 Ceinture MARRON - Krav Maga FEKM-RD 2 sur 3",
+              "orderIndex": 12
+            }
+          ]
+        },
+        {
+          "title": "UV6 — ARMES BLANCHES",
+          "orderIndex": 6,
+          "techniques": [
+            {
+              "title": "Parades contre des attaques au couteau de bas en haut :",
+              "orderIndex": 1
+            },
+            {
+              "title": "Parades contre des attaques au couteau de bas en haut — Parade de l’avant-bras gauche en avançant en diagonale sur l’extérieur contre un coup porté avec la main droite, contre-attaque du poing arrière et désarmement.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Parades contre des attaques au couteau de bas en haut — Parade de l’avant-bras droit contre le coup porté avec la main droite, changement de main en attrapant l’avant-bras armé et en attaquant de l’autre.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Parades contre un agresseur qui vient d’angles différents et attaque de façons différentes. Pour les attaques par l’arrière le défenseur tourne la tête pour voir l’action de l’agresseur.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Exercices de parades lorsque le défenseur est assis sur une chaise ou au sol.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Exercices de parades lorsque le défenseur est allongé. DÉFENSES CONTRE ATTAQUES AU BÂTON",
+              "orderIndex": 6
+            },
+            {
+              "title": "Défenses contre un agresseur armé d’un bâton, qui attaque de façons différentes (coups de haut en bas et latéraux niveaux haut, moyen et bas) et depuis tous les angles : de face, de côté, de l’arrière. Pour les attaques par l’arrière le défenseur tourne la tête pour voir l’action de l’agresseur. DÉFENSES CONTRE ATTAQUES À LA BAÏONNETTE OU AU BÂTON EN PIQUE",
+              "orderIndex": 7
+            },
+            {
+              "title": "Parade intérieure de la paume et avancée en diagonale vers le côté intérieur de l’assaillant. Prise de l’arme des deux mains et contre-attaque.",
+              "orderIndex": 8
+            },
+            {
+              "title": "Parade intérieure de la paume et avancée en diagonale vers le côté extérieur de l’assaillant. Prise de l’arme et contre-attaque.",
+              "orderIndex": 9
+            },
+            {
+              "title": "Même parade et frappe de l’avant-bras à la gorge puis étranglement en cambrant l’assaillant sur notre dos. Amenée au sol.",
+              "orderIndex": 10
+            },
+            {
+              "title": "Contre une attaque de haut en bas : parade intérieure de la main ou de l’avant-bras sur l’extérieur de l’avant-bras avant de l’agresseur, au début de son attaque.",
+              "orderIndex": 11
+            }
+          ]
+        },
+        {
+          "title": "UV7 — ARMES A FEU",
+          "orderIndex": 7,
+          "techniques": [
+            {
+              "title": "Menace de face à distances et niveaux différents.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Menace sur le côté, devant le bras, arme en contact avec le défenseur.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Menace sur le côté, derrière le bras, arme en contact avec le défenseur.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Menace à l’arrière de la tête, arme en contact avec le défenseur.",
+              "orderIndex": 4
+            },
+            {
+              "title": "Menace dans le dos à hauteur des épaules (charnière), arme en contact avec le défenseur.",
+              "orderIndex": 5
+            },
+            {
+              "title": "Menace dans le dos (sous la ligne des épaules), arme en contact avec le défenseur.",
+              "orderIndex": 6
+            }
+          ]
+        },
+        {
+          "title": "UV8 — COMBAT",
+          "orderIndex": 8,
+          "techniques": [
+            {
+              "title": "COMBAT",
+              "orderIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "NOIRE_1_DARGA",
+      "name": "Noire 1ère Darga",
+      "orderIndex": 6,
+      "isActive": true,
+      "modules": [
+        {
+          "title": "UV1 — FRAPPES SANS APPEL",
+          "orderIndex": 1,
+          "techniques": [
+            {
+              "title": "Coup de poing / paume / doigts tendus direct. En avant / en diagonale / sur les côtés.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Coup de pied direct. En avant / en diagonale / sur les côtés.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Enchaînement coup de pied poing direct / paume / doigts tendus directs. En avant / en diagonale / sur les côtés, même jambe, même bras.",
+              "orderIndex": 3
+            },
+            {
+              "title": "Enchaînement poing / paume / doigts tendus et coup de pied direct. En avant / en diagonale / sur les côtés, même bras, même jambe.",
+              "orderIndex": 4
+            }
+          ]
+        },
+        {
+          "title": "UV2 — SHADOW CODIFIE 3 MINUTES",
+          "orderIndex": 2,
+          "techniques": [
+            {
+              "title": "SHADOW CODIFIE 3 MINUTES",
+              "orderIndex": 1
+            }
+          ]
+        },
+        {
+          "title": "UV3 — DEFENSES CONTRE ATTAQUES PIEDS POINGS DEPUIS LA GARDE",
+          "orderIndex": 3,
+          "techniques": [
+            {
+              "title": "Défenses contre des attaques connues à l’avance :  Contre direct au visage du poing / paume / doigts tendus, du gauche/ du droit.  Contre coup de poing direct au corps, du gauche / du droit.  Contre coup de pied direct au corps, du gauche / du droit.  Contre coup de pied circulaire niveau moyen, du gauche / du droit.  Contre coup de pied de côté niveau moyen, du gauche / du droit. Mise à jour 25 août 2023 Ceinture NOIRE 1ère DARGA - Krav Maga FEKM-RD 1 sur 3",
+              "orderIndex": 1
+            },
+            {
+              "title": "Défenses contre tous les coups de pied bas.",
+              "orderIndex": 2
+            },
+            {
+              "title": "Défenses et ripostes contre un coup de poing ou de pied non connu à l’avance (5 fois). Dans cet exercice, plusieurs règles s’imposent :  Ne pas reculer sur l’attaque du partenaire.  Défense-contres simultanés dans la mesure du possible.  Même si on est touché, on réagit en contre-attaque.  Après la défense et la première contre-attaque, aucun mouvement ne doit être inutile dans les enchaînements suivants.",
+              "orderIndex": 3
+            }
+          ]
+        },
+        {
+          "title": "UV4 — DEFENSES CONTRE SAISIES / SOL",
+          "orderIndex": 4,
+          "techniques": [
+            {
+              "title": "Dégagement de tous les étranglements et saisies avant, arrière, de côté non connus à l’avance et enchaînement d’au moins deux coups.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Le candidat sera interrogé sur des éléments du programme sol de la ceinture jaune. Il ne saura pas à l’avance ce qui lui sera demandé et devra en connaître toutes les techniques et leurs principes.",
+              "orderIndex": 2
+            }
+          ]
+        },
+        {
+          "title": "UV5 — ARMES BLANCHES",
+          "orderIndex": 5,
+          "techniques": [
+            {
+              "title": "Défenses et désarmements contre toutes les attaques au bâton et au couteau exécutées de la main droite comme de la gauche :  Bâton de haut en bas / latéral en haut, niveau moyen et bas / en piqué niveau haut et moyen.  Couteau de haut en bas / de bas en haut / en piqué (d’estoc) / à tous les niveaux et toutes les distances / en attaque circulaire en aller-retour de type rasoir niveau haut.",
+              "orderIndex": 1
+            },
+            {
+              "title": "Deux partenaires attaquent simultanément le défenseur. L’un est armé d’un bâton, l’autre d’un couteau. Le défenseur est sans arme (durée : 1’00).",
+              "orderIndex": 2
+            }
+          ]
+        },
+        {
+          "title": "UV6 — ARMES A FEU",
+          "orderIndex": 6,
+          "techniques": [
+            {
+              "title": "ARMES A FEU",
+              "orderIndex": 1
+            }
+          ]
+        },
+        {
+          "title": "UV7 — COMBAT",
+          "orderIndex": 7,
+          "techniques": [
+            {
+              "title": "COMBAT",
+              "orderIndex": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -28,3 +28,14 @@ export const importSchema = z.object({
     }))
   }))
 });
+
+
+export const authRegisterSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8).max(200)
+});
+
+export const authLoginSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(1).max(200)
+});

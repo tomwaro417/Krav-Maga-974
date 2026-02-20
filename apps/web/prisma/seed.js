@@ -1,21 +1,26 @@
-
 const { PrismaClient } = require("@prisma/client");
+const bcrypt = require("bcryptjs");
+
 const prisma = new PrismaClient();
 
 async function main() {
-  // Admin & demo user
+  // Comptes demo (à changer en prod)
+  const adminPassword = await bcrypt.hash("admin123!", 10);
+  const userPassword = await bcrypt.hash("demo123!", 10);
+
   await prisma.user.upsert({
     where: { email: "admin@example.com" },
-    update: { role: "ADMIN" },
-    create: { email: "admin@example.com", role: "ADMIN" },
-  });
-  const user = await prisma.user.upsert({
-    where: { email: "demo@example.com" },
-    update: {},
-    create: { email: "demo@example.com", role: "USER" },
+    update: { role: "ADMIN", passwordHash: adminPassword, deletedAt: null },
+    create: { email: "admin@example.com", role: "ADMIN", passwordHash: adminPassword },
   });
 
-  // Belts (exemples)
+  const user = await prisma.user.upsert({
+    where: { email: "demo@example.com" },
+    update: { role: "USER", passwordHash: userPassword, deletedAt: null },
+    create: { email: "demo@example.com", role: "USER", passwordHash: userPassword },
+  });
+
+  // Belts (structure FEKM)
   const belts = [
     { code: "JAUNE", name: "Jaune", orderIndex: 1 },
     { code: "ORANGE", name: "Orange", orderIndex: 2 },
@@ -33,12 +38,14 @@ async function main() {
     });
   }
 
-  // Un petit référentiel d'exemple (1 module + 3 techniques) sur la ceinture Jaune
+  // Petit référentiel d'exemple (si tu n'importes pas tout de suite)
   const yellow = await prisma.belt.findUnique({ where: { code: "JAUNE" }});
+  await prisma.module.deleteMany({ where: { beltId: yellow.id } });
+
   const mod = await prisma.module.create({
     data: {
       beltId: yellow.id,
-      title: "UV1 — Coups donnés sans appel (extrait)",
+      title: "UV1 — Techniques en position neutre (extrait)",
       orderIndex: 1,
       isActive: true,
       techniques: {
@@ -64,12 +71,14 @@ async function main() {
     where: { beltId: yellow.id },
     update: {
       contentRich: "## Contenu ceinture Jaune\n\nÀ importer depuis le contenu fourni par le client.",
-      sourceRef: "Livre (contenu fourni)"
+      sourceRef: "Livre (contenu fourni)",
+      updatedBy: "seed"
     },
     create: {
       beltId: yellow.id,
       contentRich: "## Contenu ceinture Jaune\n\nÀ importer depuis le contenu fourni par le client.",
-      sourceRef: "Livre (contenu fourni)"
+      sourceRef: "Livre (contenu fourni)",
+      updatedBy: "seed"
     }
   });
 }

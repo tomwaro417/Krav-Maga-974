@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
+import { logAdminAction } from "@/lib/audit";
 import { z } from "zod";
 
 const beltSchema = z.object({
@@ -16,7 +17,7 @@ export async function GET(req: Request) {
 }
 
 export async function POST(req: Request) {
-  await requireAdmin(req);
+  const admin = await requireAdmin(req);
   const body = await req.json().catch(() => null);
   const parsed = beltSchema.safeParse(body);
   if (!parsed.success) return Response.json({ error: parsed.error.flatten() }, { status: 400 });
@@ -28,5 +29,6 @@ export async function POST(req: Request) {
     create: { code: b.code, name: b.name, orderIndex: b.orderIndex, isActive: b.isActive ?? true }
   });
 
+  await logAdminAction(admin.id, "UPSERT_BELT", { code: belt.code });
   return Response.json({ belt });
 }

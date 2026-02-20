@@ -1,54 +1,79 @@
 import { prisma } from "@/lib/db";
 import { requireUser } from "@/lib/auth";
 
-function norm(s: string) { return s.trim().toLowerCase(); }
+async function runQuery(sql: string, params: any[]) {
+  return await prisma.$queryRawUnsafe<any[]>(sql, ...params);
+}
 
 export async function GET(req: Request) {
   const user = await requireUser(req);
-
   const url = new URL(req.url);
-  const q = norm(url.searchParams.get("q") ?? "");
+
+  const q = (url.searchParams.get("q") ?? "").trim();
   const beltId = url.searchParams.get("beltId");
   const moduleId = url.searchParams.get("moduleId");
   const mastery = url.searchParams.get("mastery"); // optionnel
 
-  if (!q && !beltId) {
-    return Response.json({ results: [] });
+  if (!q && !beltId) return Response.json({ results: [] });
+
+  const params: any[] = [user.id];
+  let where = `WHERE t."isActive" = true AND m."isActive" = true AND b."isActive" = true`;
+  if (moduleId) { params.push(moduleId); where += ` AND m.id = $${params.length}`; }
+  if (beltId) { params.push(beltId); where += ` AND b.id = $${params.length}`; }
+
+  let likeParamIndex = -1;
+  if (q) {
+    params.push(`%${q}%`);
+    likeParamIndex = params.length;
+    where += ` AND (t.title ILIKE $${likeParamIndex} OR COALESCE(t.keywords,'') ILIKE $${likeParamIndex})`;
   }
 
-  const techniques = await prisma.technique.findMany({
-    where: {
-      isActive: true,
-      module: {
-        isActive: true,
-        id: moduleId ?? undefined,
-        belt: { isActive: true, id: beltId ?? undefined }
-      },
-      OR: q ? [
-        { title: { contains: q, mode: "insensitive" } },
-        { keywords: { contains: q, mode: "insensitive" } }
-      ] : undefined
-    },
-    take: 50,
-    orderBy: [{ module: { belt: { orderIndex: "asc" } } }, { module: { orderIndex: "asc" } }, { orderIndex: "asc" }],
-    include: { module: { include: { belt: true } } }
-  });
+  if (mastery) {
+    if (mastery === "NOT_SEEN") {
+      where += ` AND (p.mastery IS NULL OR p.mastery = 'NOT_SEEN')`;
+    } else {
+      params.push(mastery);
+      where += ` AND p.mastery = $${params.length}`;
+    }
+  }
 
-  const ids = techniques.map(t => t.id);
-  const progresses = await prisma.userTechniqueProgress.findMany({
-    where: { userId: user.id, techniqueId: { in: ids } }
-  });
-  const pMap = new Map(progresses.map(p => [p.techniqueId, p.mastery]));
+  const limit = 50;
+  const baseSelect = `SELECT
+       t.id as "id",
+       t.title as "title",
+       COALESCE(p.mastery, 'NOT_SEEN') as "mastery",
+       m.id as "moduleId",
+       m.title as "moduleTitle",
+       b.id as "beltId",
+       b.code as "beltCode",
+       b.name as "beltName"
+     FROM "Technique" t
+     JOIN "Module" m ON m.id = t."moduleId"
+     JOIN "Belt" b ON b.id = m."beltId"
+     LEFT JOIN "UserTechniqueProgress" p
+       ON p."techniqueId" = t.id AND p."userId" = $1
+     ${where}`;
 
-  const results = techniques
-    .map(t => ({
-      id: t.id,
-      title: t.title,
-      belt: { id: t.module.belt.id, code: t.module.belt.code, name: t.module.belt.name },
-      module: { id: t.module.id, title: t.module.title },
-      mastery: (pMap.get(t.id) ?? "NOT_SEEN")
-    }))
-    .filter(r => mastery ? r.mastery === mastery : true);
+  // Tentative avec pg_trgm similarity() si dispo
+  let rows: any[];
+  try {
+    const orderBy = q
+      ? `ORDER BY similarity(t.title, $${likeParamIndex}) DESC, b."orderIndex" ASC, m."orderIndex" ASC, t."orderIndex" ASC`
+      : `ORDER BY b."orderIndex" ASC, m."orderIndex" ASC, t."orderIndex" ASC`;
+
+    rows = await runQuery(`${baseSelect} ${orderBy} LIMIT ${limit}`, params);
+  } catch {
+    const orderBy = `ORDER BY b."orderIndex" ASC, m."orderIndex" ASC, t."orderIndex" ASC`;
+    rows = await runQuery(`${baseSelect} ${orderBy} LIMIT ${limit}`, params);
+  }
+
+  const results = rows.map(r => ({
+    id: r.id,
+    title: r.title,
+    mastery: r.mastery,
+    belt: { id: r.beltId, code: r.beltCode, name: r.beltName },
+    module: { id: r.moduleId, title: r.moduleTitle }
+  }));
 
   return Response.json({ results });
 }

@@ -31,15 +31,22 @@ enum UserVideoSlot {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  role      Role     @default(USER)
-  createdAt DateTime @default(now())
-  lastLogin DateTime?
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  role         Role     @default(USER)
+  createdAt    DateTime @default(now())
+  lastLogin    DateTime?
+  deletedAt    DateTime?
 
-  progresses UserTechniqueProgress[]
-  videos     UserTechniqueVideo[]
+  preferences UserPreference?
+  progresses  UserTechniqueProgress[]
+  videos            UserTechniqueVideo[]
+  views             UserTechniqueView[]
+  createdVideoAssets VideoAsset[] @relation("VideoCreator")
+  adminLogs         AdminAuditLog[] @relation("AdminActor")
 }
+
 
 model Belt {
   id         String   @id @default(cuid())
@@ -112,45 +119,97 @@ model UserTechniqueProgress {
 }
 
 model VideoAsset {
-  id        String      @id @default(cuid())
-  provider  String
-  storageKey String
-  status    VideoStatus @default(PROCESSING)
-  duration  Int?
-  size      Int?
-  format    String?
-  createdAt DateTime    @default(now())
+  id             String      @id @default(cuid())
+  provider       String
+  storageKey     String
+  status         VideoStatus @default(PROCESSING)
+  duration       Int?
+  size           Int?
+  format         String?
+  createdAt      DateTime    @default(now())
+  createdByUserId String?
+
+  createdByUser User? @relation("VideoCreator", fields: [createdByUserId], references: [id], onDelete: SetNull)
 
   coachLinks TechniqueVideoLink[]
   userLinks  UserTechniqueVideo[]
+
+  @@index([createdByUserId])
 }
 
-model TechniqueVideoLink {
-  id          String   @id @default(cuid())
-  techniqueId String   @unique
-  videoAssetId String
-  isActive    Boolean  @default(true)
-  createdAt   DateTime @default(now())
 
-  technique Technique @relation(fields: [techniqueId], references: [id], onDelete: Cascade)
+model TechniqueVideoLink {
+  id           String   @id @default(cuid())
+  techniqueId  String   @unique
+  videoAssetId String
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+
+  technique Technique  @relation(fields: [techniqueId], references: [id], onDelete: Cascade)
   video      VideoAsset @relation(fields: [videoAssetId], references: [id], onDelete: Restrict)
 }
 
+
+
 model UserTechniqueVideo {
-  id          String       @id @default(cuid())
-  userId      String
-  techniqueId String
-  slot        UserVideoSlot
+  id           String       @id @default(cuid())
+  userId       String
+  techniqueId  String
+  slot         UserVideoSlot
   videoAssetId String
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
-  deletedAt   DateTime?
+  isActive     Boolean      @default(true)
+  isLocked     Boolean      @default(false)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  deletedAt    DateTime?
 
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   technique Technique @relation(fields: [techniqueId], references: [id], onDelete: Cascade)
   video     VideoAsset @relation(fields: [videoAssetId], references: [id], onDelete: Restrict)
 
-  @@unique([userId, techniqueId, slot, deletedAt])
+  @@unique([userId, techniqueId, slot, isActive])
   @@index([userId])
   @@index([techniqueId])
+}
+
+
+model UserPreference {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  defaultBeltId String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user        User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  defaultBelt Belt? @relation(fields: [defaultBeltId], references: [id], onDelete: SetNull)
+
+  @@index([defaultBeltId])
+}
+
+model UserTechniqueView {
+  id          String   @id @default(cuid())
+  userId      String
+  techniqueId String
+  viewedAt    DateTime @default(now())
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  technique Technique @relation(fields: [techniqueId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, techniqueId])
+  @@index([userId])
+  @@index([techniqueId])
+  @@index([viewedAt])
+}
+
+model AdminAuditLog {
+  id        String   @id @default(cuid())
+  actorId   String
+  action    String
+  meta      Json?
+  createdAt DateTime @default(now())
+
+  actor User @relation("AdminActor", fields: [actorId], references: [id], onDelete: Cascade)
+
+  @@index([actorId])
+  @@index([createdAt])
 }

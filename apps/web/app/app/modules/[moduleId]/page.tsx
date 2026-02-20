@@ -1,8 +1,22 @@
 import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { Badge } from "@/components/ui/Badge";
+import type { MasteryLevel } from "@/lib/types";
+import { getServerUserOrNull } from "@/lib/server-auth";
+
+function label(m: MasteryLevel) {
+  switch (m) {
+    case "MASTERED": return "Maîtrise";
+    case "KNOWN": return "Connais";
+    case "SEEN": return "Vu";
+    default: return "Pas encore vu";
+  }
+}
 
 export default async function ModuleDetailPage({ params }: { params: { moduleId: string } }) {
+  const user = await getServerUserOrNull();
+  if (!user) return null;
+
   const mod = await prisma.module.findFirst({
     where: { id: params.moduleId, isActive: true, belt: { isActive: true } },
     include: {
@@ -11,6 +25,12 @@ export default async function ModuleDetailPage({ params }: { params: { moduleId:
     }
   });
   if (!mod) return <div>Introuvable</div>;
+
+  const ids = mod.techniques.map(t => t.id);
+  const progresses = await prisma.userTechniqueProgress.findMany({
+    where: { userId: user.id, techniqueId: { in: ids } }
+  });
+  const pMap = new Map(progresses.map(p => [p.techniqueId, p.mastery as MasteryLevel]));
 
   return (
     <main className="space-y-4">
@@ -22,19 +42,18 @@ export default async function ModuleDetailPage({ params }: { params: { moduleId:
       <h1 className="text-xl font-semibold">{mod.title}</h1>
 
       <div className="space-y-2">
-        {mod.techniques.map(t => (
-          <Link key={t.id} href={`/app/techniques/${t.id}`} className="no-underline">
-            <div className="flex items-center justify-between rounded-xl border border-zinc-200 p-3 hover:border-zinc-400">
-              <div className="font-medium">{t.title}</div>
-              <Badge>Pas encore vu</Badge>
-            </div>
-          </Link>
-        ))}
+        {mod.techniques.map(t => {
+          const m = pMap.get(t.id) ?? "NOT_SEEN";
+          return (
+            <Link key={t.id} href={`/app/techniques/${t.id}`} className="no-underline">
+              <div className="flex items-center justify-between rounded-xl border border-zinc-200 p-3 hover:border-zinc-400">
+                <div className="font-medium">{t.title}</div>
+                <Badge>{label(m)}</Badge>
+              </div>
+            </Link>
+          );
+        })}
       </div>
-
-      <p className="text-sm text-zinc-500">
-        Note: les badges affichent un placeholder. La vraie valeur vient de <code>/api/modules/:id</code>.
-      </p>
     </main>
   );
 }

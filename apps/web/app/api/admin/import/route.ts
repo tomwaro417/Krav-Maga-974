@@ -1,16 +1,27 @@
 import { prisma } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
 import { importSchema } from "@/lib/schemas";
+import { logAdminAction } from "@/lib/audit";
 
 export async function POST(req: Request) {
-  await requireAdmin(req);
+  const admin = await requireAdmin(req);
+  const url = new URL(req.url);
+  const dryRun = url.searchParams.get("dryRun") === "1";
+
   const body = await req.json().catch(() => null);
   const parsed = importSchema.safeParse(body);
   if (!parsed.success) return Response.json({ error: parsed.error.flatten() }, { status: 400 });
 
   const payload = parsed.data;
 
-  // Transaction pour cohérence
+  // Dry run: juste compter (sans écrire)
+  if (dryRun) {
+    const beltsUpserted = payload.belts.length;
+    const modulesCreated = payload.belts.reduce((s, b) => s + b.modules.length, 0);
+    const techniquesCreated = payload.belts.reduce((s, b) => s + b.modules.reduce((ss, m) => ss + m.techniques.length, 0), 0);
+    return Response.json({ ok: true, dryRun: true, result: { beltsUpserted, modulesCreated, techniquesCreated } });
+  }
+
   const result = await prisma.$transaction(async (tx) => {
     let beltsUpserted = 0;
     let modulesCreated = 0;
@@ -25,7 +36,6 @@ export async function POST(req: Request) {
       beltsUpserted++;
 
       // Stratégie MVP : on recrée la structure modules/techniques pour cette ceinture
-      // (à améliorer ensuite avec diff/merge & soft delete)
       await tx.module.deleteMany({ where: { beltId: belt.id } });
 
       for (const m of b.modules) {
@@ -53,5 +63,6 @@ export async function POST(req: Request) {
     return { beltsUpserted, modulesCreated, techniquesCreated };
   });
 
+  await logAdminAction(admin.id, "IMPORT_REFERENTIAL", result);
   return Response.json({ ok: true, result });
 }

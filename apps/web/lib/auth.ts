@@ -1,14 +1,22 @@
 import { prisma } from "@/lib/db";
+import { SESSION_COOKIE_NAME, getCookieFromHeader, verifySession } from "@/lib/session";
 
 export type AuthUser = { id: string; email: string; role: "USER" | "ADMIN" };
 
 export async function getAuthUserOrNull(req: Request): Promise<AuthUser | null> {
-  // ⚠️ MVP stub: remplace par Clerk/Auth0/NextAuth.
-  const email = req.headers.get("x-user-email");
-  if (!email) return null;
+  const token = getCookieFromHeader(req.headers.get("cookie"), SESSION_COOKIE_NAME);
+  if (!token) return null;
 
-  const user = await prisma.user.findUnique({ where: { email } });
+  const session = await verifySession(token);
+  if (!session) return null;
+
+  // Option: recharger le user en base (pour vérifier suppression / rôle)
+  const user = await prisma.user.findFirst({
+    where: { id: session.sub, email: session.email, deletedAt: null },
+    select: { id: true, email: true, role: true }
+  });
   if (!user) return null;
+
   return { id: user.id, email: user.email, role: user.role };
 }
 

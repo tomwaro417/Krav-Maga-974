@@ -13,12 +13,19 @@ export async function GET(req: Request, { params }: { params: { techniqueId: str
   });
   if (!technique) return new Response("Not found", { status: 404 });
 
+  // Historique (dernier vu)
+  await prisma.userTechniqueView.upsert({
+    where: { userId_techniqueId: { userId: user.id, techniqueId: technique.id } },
+    update: { viewedAt: new Date() },
+    create: { userId: user.id, techniqueId: technique.id }
+  });
+
   const progress = await prisma.userTechniqueProgress.findUnique({
     where: { userId_techniqueId: { userId: user.id, techniqueId: technique.id } }
   });
 
   const userVideos = await prisma.userTechniqueVideo.findMany({
-    where: { userId: user.id, techniqueId: technique.id, deletedAt: null },
+    where: { userId: user.id, techniqueId: technique.id, isActive: true },
     include: { video: true }
   });
 
@@ -34,7 +41,6 @@ export async function GET(req: Request, { params }: { params: { techniqueId: str
       coachVideo: technique.coachVideoLink?.isActive ? {
         assetId: technique.coachVideoLink.video.id,
         status: technique.coachVideoLink.video.status,
-        // url: à brancher via CDN / signed URL
         playbackUrl: null
       } : null,
       myVideos: userVideos.map(v => ({
