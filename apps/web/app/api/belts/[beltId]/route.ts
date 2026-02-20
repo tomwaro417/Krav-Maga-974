@@ -21,7 +21,7 @@ export async function GET(req: Request, { params }: { params: { beltId: string }
   });
   if (!belt) return new Response("Not found", { status: 404 });
 
-  const techniqueIds = belt.modules.flatMap(m => m.techniques.map(t => t.id));
+  const techniqueIds = belt.modules.flatMap((m: { techniques: { id: string }[] }) => m.techniques.map((t: { id: string }) => t.id));
   const progresses = await prisma.userTechniqueProgress.findMany({
     where: { userId: user.id, techniqueId: { in: techniqueIds } }
   });
