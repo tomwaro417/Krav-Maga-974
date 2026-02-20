@@ -7,7 +7,8 @@ module.exports = {
     exec_mode: 'fork',
     env: {
       NODE_ENV: 'production',
-      PORT: 3000
+      PORT: 3000,
+      HOSTNAME: '0.0.0.0'
     },
     error_file: '/var/log/krav-maga-974/err.log',
     out_file: '/var/log/krav-maga-974/out.log',
@@ -18,9 +19,6 @@ module.exports = {
     max_restarts: 5,
     min_uptime: '10s',
     watch: false,
-    ignore_watch: ['node_modules', '.next', 'logs'],
-    kill_timeout: 5000,
-    listen_timeout: 10000,
     env_production: {
       NODE_ENV: 'production'
     }
