@@ -5,6 +5,20 @@ import { computeKnownPlusPercent, computeMasteredPercent } from "@/lib/progress"
 import type { MasteryLevel } from "@/lib/types";
 import { getServerUserOrNull } from "@/lib/server-auth";
 
+interface Technique { id: string }
+interface Module {
+  id: string;
+  title: string;
+  techniques: Technique[];
+}
+interface Belt {
+  id: string;
+  name: string;
+  content?: { contentRich: string } | null;
+  modules: Module[];
+}
+interface Progress { techniqueId: string; mastery: string }
+
 export default async function BeltDetailPage({ params }: { params: { beltId: string } }) {
   const user = await getServerUserOrNull();
   if (!user) return null;
@@ -19,14 +33,14 @@ export default async function BeltDetailPage({ params }: { params: { beltId: str
         include: { techniques: { where: { isActive: true }, orderBy: { orderIndex: "asc" } } }
       }
     }
-  });
+  }) as unknown as Belt | null;
   if (!belt) return <div>Introuvable</div>;
 
-  const techniqueIds = belt.modules.flatMap(m => m.techniques.map(t => t.id));
+  const techniqueIds = belt.modules.flatMap((m: Module) => m.techniques.map((t: Technique) => t.id));
   const progresses = await prisma.userTechniqueProgress.findMany({
     where: { userId: user.id, techniqueId: { in: techniqueIds } }
-  });
-  const pMap = new Map(progresses.map(p => [p.techniqueId, p.mastery as MasteryLevel]));
+  }) as unknown as Progress[];
+  const pMap = new Map(progresses.map((p: Progress) => [p.techniqueId, p.mastery as MasteryLevel]));
 
   return (
     <main className="space-y-4">
@@ -49,8 +63,8 @@ export default async function BeltDetailPage({ params }: { params: { beltId: str
       <div className="space-y-2">
         <div className="text-sm text-zinc-500">Modules</div>
         <div className="grid gap-3">
-          {belt.modules.map(m => {
-            const levels: MasteryLevel[] = m.techniques.map(t => pMap.get(t.id) ?? "NOT_SEEN");
+          {belt.modules.map((m: Module) => {
+            const levels: MasteryLevel[] = m.techniques.map((t: Technique) => pMap.get(t.id) ?? "NOT_SEEN");
             const knownPlus = computeKnownPlusPercent(levels);
             const mastered = computeMasteredPercent(levels);
             return (

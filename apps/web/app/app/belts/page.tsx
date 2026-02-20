@@ -5,6 +5,16 @@ import { computeKnownPlusPercent, computeMasteredPercent } from "@/lib/progress"
 import type { MasteryLevel } from "@/lib/types";
 import { getServerUserOrNull } from "@/lib/server-auth";
 
+interface Technique { id: string }
+interface Module { techniques: Technique[] }
+interface Belt {
+  id: string;
+  code: string;
+  name: string;
+  modules: Module[];
+}
+interface Progress { techniqueId: string; mastery: string }
+
 export default async function BeltsPage() {
   const user = await getServerUserOrNull();
   if (!user) return null;
@@ -20,20 +30,20 @@ export default async function BeltsPage() {
       },
       content: true
     }
-  });
+  }) as unknown as Belt[];
 
-  const allTechniqueIds = belts.flatMap(b => b.modules.flatMap(m => m.techniques.map(t => t.id)));
+  const allTechniqueIds = belts.flatMap((b: Belt) => b.modules.flatMap((m: Module) => m.techniques.map((t: Technique) => t.id)));
   const progresses = await prisma.userTechniqueProgress.findMany({
     where: { userId: user.id, techniqueId: { in: allTechniqueIds } }
-  });
-  const pMap = new Map(progresses.map(p => [p.techniqueId, p.mastery as MasteryLevel]));
+  }) as unknown as Progress[];
+  const pMap = new Map(progresses.map((p: Progress) => [p.techniqueId, p.mastery as MasteryLevel]));
 
   return (
     <main className="space-y-4">
       <h1 className="text-xl font-semibold">Programme — Ceintures</h1>
       <div className="grid gap-4 sm:grid-cols-2">
-        {belts.map(b => {
-          const levels: MasteryLevel[] = b.modules.flatMap(m => m.techniques.map(t => pMap.get(t.id) ?? "NOT_SEEN"));
+        {belts.map((b: Belt) => {
+          const levels: MasteryLevel[] = b.modules.flatMap((m: Module) => m.techniques.map((t: Technique) => pMap.get(t.id) ?? "NOT_SEEN"));
           const knownPlus = computeKnownPlusPercent(levels);
           const mastered = computeMasteredPercent(levels);
           const totalTechniques = levels.length;

@@ -13,6 +13,16 @@ function label(m: MasteryLevel) {
   }
 }
 
+interface Technique { id: string; title: string }
+interface Belt { id: string; name: string }
+interface Module {
+  id: string;
+  title: string;
+  belt: Belt;
+  techniques: Technique[];
+}
+interface Progress { techniqueId: string; mastery: string }
+
 export default async function ModuleDetailPage({ params }: { params: { moduleId: string } }) {
   const user = await getServerUserOrNull();
   if (!user) return null;
@@ -23,14 +33,14 @@ export default async function ModuleDetailPage({ params }: { params: { moduleId:
       belt: true,
       techniques: { where: { isActive: true }, orderBy: { orderIndex: "asc" } }
     }
-  });
+  }) as unknown as Module | null;
   if (!mod) return <div>Introuvable</div>;
 
-  const ids = mod.techniques.map(t => t.id);
+  const ids = mod.techniques.map((t: Technique) => t.id);
   const progresses = await prisma.userTechniqueProgress.findMany({
     where: { userId: user.id, techniqueId: { in: ids } }
-  });
-  const pMap = new Map(progresses.map(p => [p.techniqueId, p.mastery as MasteryLevel]));
+  }) as unknown as Progress[];
+  const pMap = new Map(progresses.map((p: Progress) => [p.techniqueId, p.mastery as MasteryLevel]));
 
   return (
     <main className="space-y-4">
@@ -42,7 +52,7 @@ export default async function ModuleDetailPage({ params }: { params: { moduleId:
       <h1 className="text-xl font-semibold">{mod.title}</h1>
 
       <div className="space-y-2">
-        {mod.techniques.map(t => {
+        {mod.techniques.map((t: Technique) => {
           const m = pMap.get(t.id) ?? "NOT_SEEN";
           return (
             <Link key={t.id} href={`/app/techniques/${t.id}`} className="no-underline">

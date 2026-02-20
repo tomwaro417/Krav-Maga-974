@@ -23,7 +23,7 @@ export default function SearchPage() {
   useEffect(() => {
     fetch("/api/belts")
       .then(r => r.json())
-      .then(d => setBelts((d.belts || []).map((b: any) => ({ id: b.id, name: b.name, code: b.code }))))
+      .then(d => setBelts((d.belts || []).map((b: { id: string; name: string; code: string }) => ({ id: b.id, name: b.name, code: b.code }))))
       .catch(() => setBelts([]));
   }, []);
 

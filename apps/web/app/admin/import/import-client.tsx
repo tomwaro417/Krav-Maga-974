@@ -2,10 +2,16 @@
 
 import { useState } from "react";
 
+interface ImportResult {
+  beltsUpserted: number;
+  modulesCreated: number;
+  techniquesCreated: number;
+}
+
 export default function ImportClient() {
   const [fileText, setFileText] = useState<string>("");
-  const [preview, setPreview] = useState<any>(null);
-  const [result, setResult] = useState<any>(null);
+  const [preview, setPreview] = useState<ImportResult | null>(null);
+  const [result, setResult] = useState<ImportResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -32,8 +38,8 @@ export default function ImportClient() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error ? JSON.stringify(data.error) : "Preview impossible");
       setPreview(data.result);
-    } catch (e: any) {
-      setError(e.message || "Erreur");
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "Erreur");
     } finally {
       setLoading(false);
     }
@@ -54,8 +60,8 @@ export default function ImportClient() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error ? JSON.stringify(data.error) : "Import impossible");
       setResult(data.result);
-    } catch (e: any) {
-      setError(e.message || "Erreur");
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "Erreur");
     } finally {
       setLoading(false);
     }

@@ -2,6 +2,33 @@ import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { getServerUserOrNull } from "@/lib/server-auth";
 
+interface GroupedResult {
+  mastery: string;
+  _count: { mastery: number };
+}
+
+interface Belt {
+  id: string;
+  name: string;
+}
+
+interface Module {
+  id: string;
+  title: string;
+  belt: Belt;
+}
+
+interface Technique {
+  id: string;
+  title: string;
+  module: Module;
+}
+
+interface LastViewedItem {
+  id: string;
+  technique: Technique;
+}
+
 export default async function Dashboard() {
   const user = await getServerUserOrNull();
   if (!user) return null;
@@ -11,11 +38,11 @@ export default async function Dashboard() {
     by: ["mastery"],
     where: { userId: user.id },
     _count: { mastery: true }
-  });
+  }) as unknown as GroupedResult[];
 
   const counts: Record<string, number> = { NOT_SEEN: 0, SEEN: 0, KNOWN: 0, MASTERED: 0 };
   for (const g of grouped) counts[g.mastery] = g._count.mastery;
-  const totalEntries = grouped.reduce((s, g) => s + g._count.mastery, 0);
+  const totalEntries = grouped.reduce((s: number, g: GroupedResult) => s + g._count.mastery, 0);
   const notSeen = (totalTechniques - totalEntries) + (counts.NOT_SEEN || 0);
   const knownPlus = (counts.KNOWN || 0) + (counts.MASTERED || 0);
 
@@ -24,7 +51,7 @@ export default async function Dashboard() {
     orderBy: { viewedAt: "desc" },
     take: 8,
     include: { technique: { include: { module: { include: { belt: true } } } } }
-  });
+  }) as unknown as LastViewedItem[];
 
   return (
     <main className="space-y-5">
@@ -54,10 +81,10 @@ export default async function Dashboard() {
           <Link href="/app/to-work" className="text-sm no-underline hover:underline">À travailler →</Link>
         </div>
         {lastViewed.length === 0 ? (
-          <p className="mt-2 text-sm text-zinc-600">Aucune technique consultée pour l’instant.</p>
+          <p className="mt-2 text-sm text-zinc-600">Aucune technique consultée pour l'instant.</p>
         ) : (
           <ul className="mt-3 space-y-2">
-            {lastViewed.map(v => (
+            {lastViewed.map((v: LastViewedItem) => (
               <li key={v.id} className="text-sm">
                 <Link className="no-underline hover:underline" href={`/app/techniques/${v.technique.id}`}>
                   {v.technique.title}

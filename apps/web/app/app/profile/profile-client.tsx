@@ -40,8 +40,8 @@ export default function ProfileClient() {
       const res = await fetch("/api/me", { method: "DELETE" });
       if (!res.ok) throw new Error("Suppression impossible");
       window.location.href = "/";
-    } catch (e: any) {
-      setMessage(e.message || "Erreur");
+    } catch (e: unknown) {
+      setMessage(e instanceof Error ? e.message : "Erreur");
     } finally {
       setLoading(false);
     }

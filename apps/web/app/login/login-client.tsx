@@ -21,8 +21,8 @@ export default function LoginClient() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data?.error || "Connexion impossible");
       window.location.href = "/app";
-    } catch (err: any) {
-      setError(err.message || "Erreur");
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Erreur");
     } finally {
       setLoading(false);
     }

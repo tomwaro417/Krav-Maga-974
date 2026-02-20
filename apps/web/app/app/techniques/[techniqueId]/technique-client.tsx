@@ -114,8 +114,8 @@ export default function TechniqueClient(props: {
       await refresh();
       setMsg("Vidéo enregistrée.");
       setTimeout(() => setMsg(null), 1500);
-    } catch (e: any) {
-      setMsg(e.message || "Erreur");
+    } catch (e: unknown) {
+      setMsg(e instanceof Error ? e.message : "Erreur");
     } finally {
       setSaving(false);
     }
@@ -134,8 +134,8 @@ export default function TechniqueClient(props: {
       await refresh();
       setMsg("Vidéo supprimée.");
       setTimeout(() => setMsg(null), 1500);
-    } catch (e: any) {
-      setMsg(e.message || "Erreur");
+    } catch (e: unknown) {
+      setMsg(e instanceof Error ? e.message : "Erreur");
     } finally {
       setSaving(false);
     }

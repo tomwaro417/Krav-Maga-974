@@ -64,8 +64,8 @@ export default function CoachVideosClient() {
       if (!link.ok) throw new Error(linkData?.error || "Liaison impossible");
 
       setMsg("Vidéo coach associée.");
-    } catch (e: any) {
-      setMsg(e.message || "Erreur");
+    } catch (e: unknown) {
+      setMsg(e instanceof Error ? e.message : "Erreur");
     } finally {
       setLoading(false);
     }
@@ -83,8 +83,8 @@ export default function CoachVideosClient() {
       });
       if (!res.ok) throw new Error("Suppression impossible");
       setMsg("Vidéo coach dissociée.");
-    } catch (e: any) {
-      setMsg(e.message || "Erreur");
+    } catch (e: unknown) {
+      setMsg(e instanceof Error ? e.message : "Erreur");
     } finally {
       setLoading(false);
     }

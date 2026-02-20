@@ -16,7 +16,7 @@ export default function BeltContentsClient() {
   useEffect(() => {
     fetch("/api/admin/belts")
       .then(r => r.json())
-      .then(d => setBelts((d.belts || []).map((b: any) => ({ id: b.id, code: b.code, name: b.name }))))
+      .then(d => setBelts((d.belts || []).map((b: { id: string; code: string; name: string }) => ({ id: b.id, code: b.code, name: b.name }))))
       .catch(() => setBelts([]));
   }, []);
 
