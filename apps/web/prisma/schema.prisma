@@ -57,8 +57,9 @@ model Belt {
   createdAt  DateTime @default(now())
   updatedAt  DateTime @updatedAt
 
-  modules    Module[]
-  content    BeltContent?
+  modules       Module[]
+  content       BeltContent?
+  userPreferences UserPreference[]
 }
 
 model BeltContent {
@@ -96,10 +97,11 @@ model Technique {
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 
-  module   Module @relation(fields: [moduleId], references: [id], onDelete: Cascade)
-  progress UserTechniqueProgress[]
+  module     Module @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  progress   UserTechniqueProgress[]
   coachVideoLink TechniqueVideoLink?
   userVideos UserTechniqueVideo[]
+  userViews  UserTechniqueView[]
 }
 
 model UserTechniqueProgress {
